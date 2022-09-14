@@ -1,5 +1,5 @@
 import React, { SyntheticEvent, useEffect, useState } from 'react'
-import { AppBar as MuiAppBar, Box, IconButton, styled, Toolbar, Typography } from '@mui/material'
+import { AppBar as MuiAppBar, Box, Button, IconButton, styled, Toolbar, Typography } from '@mui/material'
 import { Cancel, CancelOutlined, CancelPresentation, KeyboardArrowDown, Mail, Menu, Person } from '@mui/icons-material'
 import './AppBar.css'
 import AppMenu from '../menu/AppMenu'
@@ -62,6 +62,18 @@ function AppBar() {
         }
     })
 
+    const MyAppBarMiddle = styled(Box)(({ theme }) => {
+        return {
+            display: "flex",
+            justifyContent: "space-around",
+            alignItems: "center",
+            alignContent: "center",
+            [theme.breakpoints.up('sm')]: {
+                justifyContent: "space-between",
+            }
+        }
+    })
+
     const handleEmail = (event: React.SyntheticEvent) => {
         alert("emailing");
     }
@@ -91,13 +103,25 @@ function AppBar() {
                             </div>
                         </RightSideIcons>
                     </HeaderLeftSide>
-                    <Box>
+                    <MyAppBarMiddle>
                         <div className='arrow-icon-wrapper'>
                             <a className='arrow-skills' style={{ color: "maroon" }} onClick={handleScrollOnClick}>
                                 <MyKeyboardArrowDown />
                             </a>
                         </div>
-                    </Box>
+
+                        {/* <div>
+                         <Button>focus</Button>
+                        </div> */}
+                    </MyAppBarMiddle>
+
+                    {/* <Box>
+                        <div className='arrow-icon-wrapper'>
+                            <a className='arrow-skills' style={{ color: "maroon" }} onClick={handleScrollOnClick}>
+                                <MyKeyboardArrowDown />
+                            </a>
+                        </div>
+                    </Box> */}
                     <HeaderRightSide>
                         <IconButton onClick={handleShowMenu}>
                             {!showMenu ? <Menu color='success' /> : <CancelPresentation color='success' />}

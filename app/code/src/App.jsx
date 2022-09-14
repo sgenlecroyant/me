@@ -3,6 +3,7 @@ import { Box, Drawer, styled } from "@mui/material";
 import { useEffect } from "react";
 import AppBar from "./components/app-bar/AppBar";
 import Contact from "./components/contact/Contact";
+import Focus from "./components/focus/Focus";
 import Intro from "./components/intro/Intro";
 import AppMenu from "./components/menu/AppMenu";
 import Sections from "./components/sections/Sections";
@@ -34,6 +35,7 @@ function App() {
           <Sections>
             <Skills />
             <Skills3D />
+            <Focus/>
             <Contact />
             <Social />
           </Sections>

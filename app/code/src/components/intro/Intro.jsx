@@ -111,7 +111,7 @@ function Intro(props) {
             <MyIntroText>
                 <div className='inner-text-intro'>
                     
-                    <h4>Hi there, I am <i> <strong className='my-name'> <em>Franck Nsabimana</em> ,</strong> here</i>,</h4>
+                    <h4>Hi there, I am <i> <strong className='my-name'> <em>Franck Nsabimanasssssssssssss</em> ,</strong> here</i>,</h4>
                     <Typography component={'div'}> <div className='action' >- I do:</div> <span className='element'>Backend</span>, <span className='element'>, frontend development</span> and <span className='element'>big data processing</span> </Typography>
                     <Typography component={'div'}> <div className='action'>- I speak: </div> <span className='element'>Java</span>, <span className='element'>JavaScript</span> and <span className='element'>TypeScript</span> </Typography>
                     <Typography component={'div'}> <div className='action'>- My favorite programming paradigms: </div> <span className='element'>object-oriented programming,</span> <span className='element'>functional programming</span>  <span className='element'>.multithreaded programming</span> </Typography>

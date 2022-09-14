@@ -71,6 +71,10 @@ function AppMenu(props: { handleMenuOptionClick: Function; showMenu: boolean }) 
                         {/* <a href="#skills">Skills</a> */}
                         Skills
                     </li>
+                    <li id='menu-item'  className='focus' title='focus' onClick={handleScroll}>
+                        {/* <a href="#skills">Skills</a> */}
+                        See focus
+                    </li>
                     <li id='menu-item'  className='contact' title='contact' onClick={handleScroll}>
                         {/* <a style={{ textDecorationColor: "none" }} href="#contact">Let's connect</a> */}
                         Let's connect
