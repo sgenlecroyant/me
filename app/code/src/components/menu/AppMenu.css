@@ -1,0 +1,110 @@
+.skills-box{
+    background-color: rgb(13, 13, 46);
+    width: 200px;
+    height: 70vh;
+    position: fixed;
+    top: 90px;
+    right: 0px;
+    z-index: 3;
+
+    animation-name: app-menu;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes app-menu {
+
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+     }
+     25% {
+         opacity: 0.2;
+     }
+
+     50% {
+         opacity: 0.4;
+     }
+
+     75% {
+         opacity: 0.6;
+     }
+
+     95% {
+         opacity: 0.8;
+     }
+     
+   
+}
+.skills-box > ul > li,  a {
+    text-decoration: none;
+    color: darkgrey;
+    list-style: none;
+    margin-bottom: 10px;
+    font-size: large;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: expanded;
+    
+}
+
+.skills-box > ul > div {
+
+    animation: annimated 5s infinite;
+    color: green;
+}
+
+@keyframes annimated {
+        
+    100%{
+        opacity: 0;
+    }
+
+}
+
+#menu-item {
+    border: 0px solid inherit;
+    border-radius: 50px;
+    margin-left: 5px;
+}
+
+#menu-item:hover {
+
+    background-color: rgb(47, 47, 51);
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+
+    /* animation-name: animated-menu-hover;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+    animation-iteration-count: 1; */
+}
+
+
+
+#menu-item {
+    animation-name: animated-menu;
+    animation-timing-function: ease-out;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+@keyframes animated-menu {
+    
+    0% {
+       transform: translateX(100px);
+       color: whitesmoke
+    }
+
+    50% {
+        transform: translateX(100px) ;
+        color: whitesmoke;
+    } 
+
+     /* 100% {
+        transform: translateX(100px);
+    } */
+}

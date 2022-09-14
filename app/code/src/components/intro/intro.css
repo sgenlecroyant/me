@@ -1,0 +1,193 @@
+/* .intro {
+    display: flex;
+} */
+h4{
+    font-weight: 100;
+}
+.my-name {
+    font-family: cursive;
+    font-weight: 900;
+}
+
+
+.intro>.profile-image {
+    flex: 1;
+    /* background-color: crimson; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 77px;
+    margin-left: 0px;
+}
+
+.intro>.intro-text {
+    flex: 1;
+    color: maroon;
+}
+
+.intro>.profile-image>img {
+    display: flex;
+    float: left;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover
+}
+.name {
+    color: maroon;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+}
+
+.arrow-skills:hover {
+    cursor: pointer;
+}
+.i-do {
+    color: black;
+    margin-left: 0px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+}
+
+.animated-1 {
+    color: black;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.i-speak {
+    /* margin-top: 40px; */
+}
+
+.animated-2 {
+    color: black;
+    font-weight: 900;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.programming-paradigm {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+}
+
+.animated-3 {
+    font-style: oblique;
+    margin-left: 60px;
+}
+
+@keyframes arrowBlink {
+    100%{
+        opacity: 0;
+    }
+}
+
+.inner-text-intro{
+   line-height: 1px;
+   /* color: red; */
+}
+
+.inner-text-intro > .action {
+    color: red;
+}
+
+.sjsjsj{
+    text-decoration-line: overline;
+}
+
+.element {
+    /* color: rgb(13, 13, 46); */
+    color: rgb(85, 62, 19);
+    /* font-size: 18px; */
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    /* font-weight: 900; */
+}
+
+@media screen and (max-width: 760px) {
+
+    .element {
+        /* color: rgb(13, 13, 46); */
+        /* color: rgb(85, 62, 19); */
+        /* font-size: 15px; */
+        font-family: 'Times New Roman', Times, serif;
+        font-style: oblique;
+        /* font-weight: 900; */
+    }
+
+    .i-do {
+        color: black;
+        margin-left: 2px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 500;
+        margin-top: 0px;
+
+    }
+
+    .i-speak {
+        /* margin-top: 60px; */
+        color: black
+
+    }
+
+
+
+    .animated-1 {
+        color: black;
+        font-weight: 900;
+        font-size: smaller;
+    }
+
+
+    .animated-2 {
+        color: black;
+        font-weight: 900;
+        font-size: smaller;
+        margin-left: 0px;
+    }
+
+    .animated-3 {
+        font-style: oblique;
+        margin-left: 0px;
+        font-size: smaller;
+    }
+
+    .inner-text-intro > h3 {
+        /* background-color: yellow; */
+        font-size: small;
+    }
+}
+
+.action {
+
+    /* font-weight: 100; */
+    /* font-size: 15px; */
+    font-family: monospace;
+}
+
+
+/* @media screen and (max-width: 820px) {
+    .arrow-icon-wrapper {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 377px) {
+    .arrow-icon-wrapper {
+        margin-top: -45px;
+    }
+}
+
+@media screen and (min-width: 910px) {
+    .arrow-icon-wrapper {
+        margin-top: -920px;
+        background-color: red;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .arrow-icon-wrapper {
+        margin-top: 0px;
+        background-color: green;
+    }
+} */

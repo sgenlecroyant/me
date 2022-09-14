@@ -1,0 +1,40 @@
+.net-icon {
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.net-icon:hover {
+    cursor: pointer;
+}
+
+.animated-social {
+    animation-name: spcial-page-scroll-animated;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+@keyframes spcial-page-scroll-animated {
+    0% {
+        transform: translateY(800px);
+        opacity: 0;
+     }
+     25% {
+         opacity: 0.2;
+         transform: translateY(700px);
+     }
+
+     50% {
+         opacity: 0.4;
+         transform: translateY(600px);
+     }
+
+     75% {
+         opacity: 0.6;
+         transform: translateY(500px);
+     }
+
+     100% {
+         opacity: 0.8;
+         transform: translateY(150px);
+     }   
+}

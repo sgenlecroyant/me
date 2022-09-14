@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="website description" content="my porfolio to mark my online presence" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <title>Code Debug</title>
+  <style>
+
+    .site-icon {
+      width: 200px;
+      height: 200px;
+      border: 0px solid inherit;
+      border-radius: 50px;
+    }
+    * {
+      scroll-behavior: smooth;
+
+    }
+
+     body {
+
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body::-webkit-scrollbar {
+      display: none;
+      /* for Chrome, Safari, and Opera */
+    }
+
+    body {
+      -ms-overflow-style: none;
+      /* for Internet Explorer, Edge */
+      scrollbar-width: none;
+      /* for Firefox */
+      overflow-y: scroll;
+    }
+
+
+    .main {
+
+      scroll-snap-type: y mandatory;
+
+      overflow-y: scroll;
+    }
+
+
+    section {
+      scroll-snap-align: start;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+</body>
+
+</html>
