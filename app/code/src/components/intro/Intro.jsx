@@ -65,12 +65,13 @@ function Intro(props) {
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-around",
+            marginTop: "50px",
             [theme.breakpoints.down('md')]: {
                 // flex: 0,
                 textAlign: "center",
                 width: "350px",
                 // backgroundColor: "green",
-                margin: "2px auto"
+                margin: "50px auto"
             }
         }
     })
@@ -80,6 +81,7 @@ function Intro(props) {
             fontSize: "80px",
             color: "inherit",
             animation: "arrowBlink 1s infinite",
+            margin: "10px auto"
 
         }
     })
@@ -109,17 +111,26 @@ function Intro(props) {
                 </MyIntroImage>
             </MyIntroProfileImage>
             <MyIntroText>
-                <div className='inner-text-intro'>
-                    
-                    <h4>Hi there, I am <i> <strong className='my-name'> <em>Franck Nsabimanasssssssssssss</em> ,</strong> here</i>,</h4>
-                    <Typography component={'div'}> <div className='action' >- I do:</div> <span className='element'>Backend</span>, <span className='element'>, frontend development</span> and <span className='element'>big data processing</span> </Typography>
-                    <Typography component={'div'}> <div className='action'>- I speak: </div> <span className='element'>Java</span>, <span className='element'>JavaScript</span> and <span className='element'>TypeScript</span> </Typography>
-                    <Typography component={'div'}> <div className='action'>- My favorite programming paradigms: </div> <span className='element'>object-oriented programming,</span> <span className='element'>functional programming</span>  <span className='element'>.multithreaded programming</span> </Typography>
+                <div className='innner-intro-wrapper'>
+                    <span className='intro-inner-title'>I use:</span>
+                    <span>
+                    <ul className='list'>
+                        <li className='intro-inner-item'>Java</li>
+                        <li className='intro-inner-item'>JavaScript</li>
+                        <li className='intro-inner-item'>TypeScript</li>
+                    </ul>
+                    </span>
+                    <span >
+                    <span className='intro-inner-title'>My favorites programming paradigms:</span>
+                    <ul className='list'>
+                        <li className='intro-inner-item'>OOP</li>
+                        <li className='intro-inner-item'>Functional Programming</li>
+                        <li className='intro-inner-item'>Multithreaded-Programmming</li>
+                    </ul>
+                    </span>
                 </div>
-                {/* <div className='arrow-icon-wrapper'>
-                    <a className='arrow-skills' style={{color: "maroon"}} onClick={handleScrollOnClick}>
-                    <MyKeyboardArrowDown />
-                    </a>
+                {/* <div>
+                <MyKeyboardArrowDown/>
                 </div> */}
             </MyIntroText>
         </MyStyledIntro>

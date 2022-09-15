@@ -1,0 +1,38 @@
+
+#focus {
+    margin-top: -550px;
+}
+
+.wrapper {
+    /* color: red; */
+}
+.focus-wrapper .wrapper {
+    
+    list-style-type: square;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 40px;
+}
+
+@media screen and (max-width: 480px) {
+
+    #focus {
+        margin-top: -800px;
+    }
+
+    .focus-wrapper .wrapper {
+
+        display: block;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        /* list-style-type: none; */
+        width: 180px;
+        margin: 10px auto;
+        /* background-color: green; */
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 40px;
+    }
+
+}

@@ -1,5 +1,6 @@
 import { Box, styled, Typography } from '@mui/material'
 import React from 'react'
+import './focus.css'
 
 function Focus() {
 
@@ -7,9 +8,9 @@ function Focus() {
         return {
             color: "inherit",
             width: "100vw",
-            height: "70vh",
+            height: "22vh",
             backgroundColor: "lightblue",
-            paddingTop: "180px"
+            paddingTop: "110px"
 
         }
     })
@@ -30,9 +31,9 @@ function Focus() {
     })
   return (
     <div id='focus'>
-        <MyFocusWrapper>
-            <Typography textAlign={'center'} style={{fontFamily: "monospace"}}>I mainly focus on: </Typography>
-            <MyFocusInnerWrapper>
+        <MyFocusWrapper className='focus-wrapper'>
+            <Typography textAlign={'center'} style={{fontFamily: "monospace", display: "block", borderBottom: "3px solid black",paddingBottom: "0px", margin: "0px auto", backgroundColor: "", width: "190px"}}>I mainly focus on: </Typography>
+            <MyFocusInnerWrapper className='wrapper'>
                 <li>Backend Development</li>
                 <li>Microservices</li>
                 <li>Distributed Systems</li>

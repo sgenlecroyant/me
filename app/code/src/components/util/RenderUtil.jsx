@@ -175,10 +175,7 @@ export class RenderUtil {
                                 the game, it got matured back in 2017 and it has grown amazingly faster.
                                  <br />
                                 Built on top of the Apache Kafka Messaging System, which is the top choice for building data pipelines for Big Data Processig,
-                                and it is one of the top contenders with Apache Flink, NiFi, Hadoop, and Apache Spark Streaming.
-                                <br />
-                                All these Kafka alternative competitors follow the Lambdas architecture, they do both batch processing and real-time processing (Hybrid), but Kafka Streams follows a different architecure, KAPPA architecture, 
-                                which only focuses on real-time stream processing and it shines for real-time data streams for faster analysis and processing and for developing Data-Driven Decision making Systems
+                                and it is one of the top contenders with Apache Flink, NiFi, Hadoop, and Apache Spark Streaming. Kafka Streams uses the KAPPA architecture, which is true stream-processing,
                                 </div> 
                             </Typography>
                         </div>
