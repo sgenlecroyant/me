@@ -115,7 +115,7 @@ function Skills(props) {
     const SkillsContainer = styled(Box)(({ theme }) => {
         return {
             width: "100vw",
-            height: "135vh",
+            height: "190vh",
             backgroundColor: "",
             paddingTop: "8rem",
             [theme.breakpoints.down('sm')]: {
