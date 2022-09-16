@@ -28,7 +28,8 @@
     width: 30%;
     height: 25rem;
     display: block;
-    background-color: rgb(165, 16, 46) !important
+    /* background-color: rgb(165, 16, 46) !important */
+    /* background-color: rgb(252, 214, 214); */
 }
 
 .skill_type_title{
@@ -43,6 +44,11 @@
     display: block;
 } */
 
+
+.tech_icon {
+    width: 80px;
+    height: 80px;
+}
 
 
 @media screen and (max-width: 480px) {

@@ -4,8 +4,31 @@ import React, { useEffect, useState } from 'react'
 import SkillsTab from './SkillsTab'
 import './skills.css'
 import { RenderUtil } from '../../util/RenderUtil'
-import { School } from '@mui/icons-material'
+import { Javascript, School } from '@mui/icons-material'
 import spring from '../../../assets/images/spring 2.svg'
+import mysql from '../../../assets/images/mysql.svg'
+import maven from '../../../assets/images/maven.png'
+import gradle from '../../../assets/images/gradle 1.png'
+import gradle2 from '../../../assets/images/gradle 2.svg'
+import postgresql from "../../../assets/images/postgresql.svg"
+import kafka from '../../../assets/images/kafka.svg'
+import kafkaStreams from "../../../assets/images/kafka streams.png"
+import elasticsearch from '../../../assets/images/elasticsearch-logo.svg'
+import elasticsearch2 from '../../../assets/images/elasticsearch.svg'
+import reactjs from '../../../assets/images/reactjs blue.svg'
+import reactjs2 from '../../../assets/images/reactjs green.svg'
+import redux from '../../../assets/images/redux.svg'
+import materialUI from '../../../assets/images/material ui.svg'
+import hibernate from '../../../assets/images/hibernate-logo.svg'
+import java from '../../../assets/images/java.svg'
+import javascript from '../../../assets/images/javascript.svg'
+import docker from '../../../assets/images/docker-fill.svg'
+import jenkins from '../../../assets/images/jenkins.svg'
+import git from '../../../assets/images/git.svg'
+import github from '../../../assets/images/github.svg'
+import typescript from '../../../assets/images/typescript.svg'
+
+
 function Skills(props) {
     const [selectedTabElementDetails, setSelectedTabElementDetails] = useState({ id: 0, title: "", isSelected: false, className: "" })
     const [skillsTabArray, setSkillsTabArray] = useState([
@@ -74,7 +97,7 @@ function Skills(props) {
 
             var selectClickedOnly = unselectedTabs.map((unselected) => {
 
-                if (unselected.id == tabElement.id) {
+                if (unselected.id === tabElement.id) {
                     var selectedOnClick = { ...unselected, isSelected: true }
                     setSelectedTabElementDetails(selectedOnClick)
                     return selectedOnClick
@@ -125,22 +148,78 @@ function Skills(props) {
                     </div>
                 </div>
                 <div className="skills_first_row">
-                    <Paper className="skills_type">
+                    <Paper elevation={5} className="skills_type">
                         <div className="skill_type_title">
                             Backend
                         </div>
                         <div className="backend_skills">
-                            <img src={spring} alt="spring framework" />
+                            <img className="tech_icon" src={java} alt="spring framework" />
+                            <img className="tech_icon" src={spring} alt="spring framework" />
+                            <img className="tech_icon" src={kafka} alt="spring framework" />
+                            <img className="tech_icon" src={maven} alt="spring framework" />
+                            <img className="tech_icon" src={gradle2} alt="spring framework" />
                         </div>
                     </Paper>
                     <Paper className="skills_type">
                         <div className="skill_type_title">
                             Frontend
                         </div>
+                        <div className="frontend_skills">
+                            <img className="tech_icon" src={javascript} alt="spring framework" />
+                            <img className="tech_icon" src={reactjs} alt="reactjs" />
+                            <img className="tech_icon" src={typescript} alt="typescript" />
+                            <img className="tech_icon" src={materialUI} alt="material ui" />
+                            <img className="tech_icon" src={redux} alt="redux" />
+                        </div>
                     </Paper>
                     <Paper className="skills_type">
                         <div className="skill_type_title">
                             Big Data Processing
+                        </div>
+                        <div className="big_data_skills">
+                        <img className="tech_icon" src={java} alt="java" />
+                            <img className="tech_icon" src={kafkaStreams} alt="kafka streams" />
+                        </div>
+                    </Paper>
+                </div>
+
+              
+
+                <div className="skills_first_row">
+                    <Paper elevation={5} className="skills_type">
+                        <div className="skill_type_title">
+                            Databases
+                        </div>
+                        <div className="backend_skills">
+                            <img className="tech_icon" src={mysql} alt="mysql" />
+                            <img className="tech_icon" src={postgresql} alt="postgres" />
+                            <img className="tech_icon" src={elasticsearch2} alt="elasticsearch" />
+                        </div>
+                    </Paper>
+                    <Paper className="skills_type">
+                        <div className="skill_type_title">
+                            CI/CD
+                        </div>
+                        <div className="ci_cd_skills">
+                            <img className="tech_icon" src={jenkins} alt="mysql" />
+                        </div>
+                    </Paper>
+                    <Paper className="skills_type">
+                        <div className="skill_type_title">
+                           VCS/SCM
+                        </div>
+                        <div className="vcs_skills">
+                            <img className="tech_icon" src={git} alt="mysql" />
+                            <img className="tech_icon" src={github} alt="mysql" />
+                        </div>
+                    </Paper>
+                </div>
+
+                
+                <div className="skills_first_row">
+                    <Paper className="skills_type">
+                        <div className="skill_type_title">
+                           ORM Tools
                         </div>
                     </Paper>
                 </div>

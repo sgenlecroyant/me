@@ -29,8 +29,8 @@ function Intro(props) {
         const languageAnimate = document.querySelector('#languageAnimate')
         init(languageAnimate, { showCursor: false, strings: ['Java', 'JavaScript', 'TypeScript'] })
         
-        const paradigm_animate = document.querySelector('#paradigm_animate')
-        init(paradigm_animate, { showCursor: false, strings: ['Object-Oriented programming', 'Functional programming', 'Multithreaded-programming'] })
+        // const paradigm_animate = document.querySelector('#paradigm_animate')
+        // init(paradigm_animate, { showCursor: false, strings: ['Object-Oriented programming', 'Functional programming', 'Multithreaded-programming'] })
     
     }, [])
 

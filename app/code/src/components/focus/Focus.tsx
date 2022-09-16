@@ -1,7 +1,6 @@
 import { Box, styled, Typography } from '@mui/material'
 import React from 'react'
 import './focus.css'
-import image from '../../assets/images/clippy.png'
 
 function Focus() {
 
