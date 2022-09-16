@@ -4,7 +4,7 @@
 
 .logo {
     color: white;
-    font-size: var(--defaultFontSize);
+    font-size: 1.6rem;
     font-weight: 900;
     font-style: italic;
 }
@@ -30,6 +30,7 @@
 
 .right_side .links li a:hover{
     border-bottom: 5px solid black;
+    transition: 0.5s;
 }
 
 .menu {
@@ -43,5 +44,9 @@
 
     .menu {
         display: block;
+    }
+
+    .logo {
+        font-size: var(--defaultFontSize);
     }
 }

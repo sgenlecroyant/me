@@ -1,6 +1,6 @@
 import React, { SyntheticEvent, useEffect, useState } from 'react'
-import { AppBar as MuiAppBar, Box, Button, IconButton, styled, Toolbar, Typography } from '@mui/material'
-import { Cancel, CancelOutlined, CancelPresentation, KeyboardArrowDown, Mail, Menu, Person } from '@mui/icons-material'
+import { Box, styled } from '@mui/material'
+import {  Menu, Close, Clear  } from '@mui/icons-material'
 import './AppBar.css'
 import AppMenu from '../menu/AppMenu'
 function AppBar() {
@@ -21,6 +21,10 @@ function AppBar() {
         }
     })
 
+    const handleClick = (e: any) => {
+        setShowMenu(!showMenu)
+    }
+
     return (
         <React.Fragment>
             <NavBar className='navbar'>
@@ -33,10 +37,11 @@ function AppBar() {
                         <li><a href="#" id="focus">focus</a></li>
                     </ul>
                 </div>
-                <div className='menu'>
-                    <Menu/>
+                <div className='menu' onClick={handleClick}>
+                    {showMenu? <Close/> : <Menu/>}
                 </div>
             </NavBar>
+            <AppMenu showMenu={showMenu} handleMenuOptionClick={handleClick}/>
         </React.Fragment>
     )
 }

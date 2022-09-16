@@ -1,22 +1,38 @@
+
+.logo_menu {
+    text-align: center;
+    color: crimson;
+    font-size: 10px;
+    border-bottom: 2px solid black;
+    padding: 6px;
+}
+
 .skills-box{
-    background-color: rgb(13, 13, 46);
-    width: 200px;
-    height: 70vh;
+    background-color: #fff;
+    width: 180px;
+    height: 50vh;
     position: fixed;
-    top: 90px;
-    right: 0px;
+    top: 0px;
+    left: 0px;
     z-index: 3;
+
+    border-top: 0px solid crimson;
+    border-left: 0px solid crimson;
+
+    /* color: crimson; */
 
     animation-name: app-menu;
     animation-timing-function: ease-in-out;
     animation-duration: 1.5s;
     animation-iteration-count: 1;
+
+    border-bottom-right-radius: 50px;
 }
 
 @keyframes app-menu {
 
     0% {
-        transform: translateX(100px);
+        transform: translateX(-100px);
         opacity: 0;
      }
      25% {
@@ -39,7 +55,7 @@
 }
 .skills-box > ul > li,  a {
     text-decoration: none;
-    color: darkgrey;
+    color: crimson;
     list-style: none;
     margin-bottom: 10px;
     font-size: large;
@@ -83,6 +99,42 @@
     animation-iteration-count: 1; */
 }
 
+
+.list_item_home{
+    margin-top: -10px;
+    margin-left: -30px;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+}
+
+.list_item_services{
+    margin-top: -50px;
+    margin-left: -30px;
+    text-transform: capitalize;
+}
+
+.list_item_features{
+    margin-top: -50px;
+    margin-left: -30px;
+    text-transform: capitalize;
+}
+
+.list_item_connect{
+    margin-top: -50px;
+    margin-left: -30px;
+    text-transform: capitalize;
+}
+
+.item_button {
+
+}
+
+.item_text {
+    margin-left: -15px;
+    color: inherit;
+    font-size: x-small;
+    font-weight: 300;
+}
 
 
 #menu-item {

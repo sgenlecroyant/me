@@ -1,6 +1,9 @@
 import { Box, styled } from '@mui/material'
 import React, { useEffect, useRef } from 'react'
 // import useOutsideAlerter from '../../hooks/UseOutsideAlerter';
+import { List, Typography, ListItemIcon, ListItem, ListItemText, ListItemButton, IconButton } from '@mui/material'
+
+import { Email, Handshake, AirlineSeatReclineNormal, School, ContactEmergency, } from '@mui/icons-material'
 import './AppMenu.css'
 
 
@@ -14,37 +17,15 @@ function AppMenu(props: { handleMenuOptionClick: Function; showMenu: boolean }) 
             width: "20px",
             height: "120px",
             top: "0px",
-            right: "0px",
+            left: "0px",
             backgroundColor: "maroon"
         }
     })
 
-    // function useOutsideAlerter(ref: any) {
-    //     useEffect(() => {
-    //       /**
-    //        * Alert if clicked on outside of element
-    //        */
-    //       function handleClickOutside(event: any) {
-    //         if (ref.current && !ref.current.contains(event.target)) {
-    //             alert("Yu clicked outside")
-    //             props.handleMenuOptionClick()
-    //             alert("closed")
-    //         }
-    //       }
-    //       // Bind the event listener
-    //       document.addEventListener("mousedown", handleClickOutside);
-    //       return () => {
-    //         // Unbind the event listener on clean up
-    //         document.removeEventListener("mousedown", handleClickOutside);
-    //       };
-    //     }, [ref]);
-    //   }
-    
-
     const handleScroll = (event: any): void => {
         const destinationElement = document.getElementById(event.target.className)
         console.log("className: ", event.target.className)
-        if(event.target.className === '3D-skills'){
+        if (event.target.className === '3D-skills') {
             alert("Currently Not Available!")
             props.handleMenuOptionClick()
             console.error("Requested Feature Not Available")
@@ -55,36 +36,49 @@ function AppMenu(props: { handleMenuOptionClick: Function; showMenu: boolean }) 
 
         props.handleMenuOptionClick()
 
-        destinationElement?.scrollIntoView({behavior: 'smooth'});
+        destinationElement?.scrollIntoView({ behavior: 'smooth' });
         console.log("scrolled to the destination: ", event.target.i)
-        // setTimeout(() => {
-        //     destinationElement?.classList.remove("animated-social")
-        //     console.log("removed class name")
-        // }, 5000);
+
     }
 
     return (
         <React.Fragment >
             {props.showMenu && <div className='skills-box' ref={wrapperRef}>
-                <ul>
-                    <li id='menu-item'  className='skills' title='skills' onClick={handleScroll}>
-                        {/* <a href="#skills">Skills</a> */}
-                        Skills
-                    </li>
-                    <li id='menu-item'  className='focus' title='focus' onClick={handleScroll}>
-                        {/* <a href="#skills">Skills</a> */}
-                        See focus
-                    </li>
-                    <li id='menu-item'  className='contact' title='contact' onClick={handleScroll}>
-                        {/* <a style={{ textDecorationColor: "none" }} href="#contact">Let's connect</a> */}
-                        Let's connect
-                    </li>
-                    <li id='menu-item'  className='social' title='social' onClick={handleScroll}>
-                        {/* <a style={{textDecorationColor: "none"}} href="#social">Social</a> */}
-                        Social
-                    </li>
-                    <li id='menu-item'  className='3D-skills' title='3d-skills' onClick={handleScroll}>See Skills in 3D</li>
-                </ul>
+                <Typography className='logo_menu'>CodeDebug</Typography>
+                <List>
+                    <ListItem className='list_item_home'>
+                        <IconButton className="item_button">
+                            <ListItemButton>
+                            <School fontSize='small'/>
+                            </ListItemButton>
+                        </IconButton>
+                        <ListItemText disableTypography primary="skills" className='item_text' />
+                    </ListItem>
+                    <ListItem className='list_item_services'>
+                        <IconButton className="item_button">
+                            <ListItemButton>
+                                <AirlineSeatReclineNormal fontSize='small'/>
+                            </ListItemButton>
+                        </IconButton>
+                        <ListItemText disableTypography primary="focus" className='item_text'></ListItemText>
+                    </ListItem>
+                    <ListItem className='list_item_features'>
+                        <IconButton className="item_button">
+                            <ListItemButton>
+                                <Email fontSize='small'/>
+                            </ListItemButton>
+                        </IconButton>
+                        <ListItemText disableTypography primary="contact" className='item_text'></ListItemText>
+                    </ListItem>
+                    <ListItem className='list_item_connect'>
+                        <IconButton className="item_button">
+                            <ListItemButton>
+                                <Handshake fontSize='small' />
+                            </ListItemButton>
+                        </IconButton>
+                        <ListItemText disableTypography primary="connect" className='item_text'></ListItemText>
+                    </ListItem>
+                </List>
             </div>}
         </React.Fragment>
     )
