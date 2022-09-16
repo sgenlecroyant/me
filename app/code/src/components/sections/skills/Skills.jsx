@@ -1,4 +1,4 @@
-import { Box, styled, Tab, Typography } from '@mui/material'
+import { Box, Paper, styled, Tab, Typography } from '@mui/material'
 import { height } from '@mui/system'
 import React, { useEffect, useState } from 'react'
 import SkillsTab from './SkillsTab'
@@ -65,7 +65,7 @@ function Skills(props) {
         setSkillsTabArray(selectedAtInitialState)
     }, [])
 
-    
+
 
     const handleSkillsTabClick = (event, tabElement) => {
 
@@ -73,7 +73,7 @@ function Skills(props) {
             var unselectedTabs = skillsTabArray.map((tabElt) => tabElt.isSelected ? { ...tabElt, isSelected: false } : { ...tabElt });
 
             var selectClickedOnly = unselectedTabs.map((unselected) => {
-                
+
                 if (unselected.id == tabElement.id) {
                     var selectedOnClick = { ...unselected, isSelected: true }
                     setSelectedTabElementDetails(selectedOnClick)
@@ -88,10 +88,10 @@ function Skills(props) {
         console.log("selecting", tabElement)
     }
 
-    const SkillsContainer = styled(Box)(({theme}) => {
+    const SkillsContainer = styled(Box)(({ theme }) => {
         return {
             width: "100vw",
-            height: "100vh",
+            height: "120vh",
             backgroundColor: "",
             paddingTop: "8rem",
             [theme.breakpoints.down('sm')]: {
@@ -119,11 +119,21 @@ function Skills(props) {
                 <div className="skills_skills_section">
                     <div className="title_and_icon">
                         <div>
-                            <School id="skills_icon"/>
+                            <School id="skills_icon" />
                         </div>
                         <div className="skills_title">Skills I have got so far</div>
                     </div>
-                    
+                </div>
+                <div className="skills_first_row">
+                    <Paper className="skills_type">
+                        Backend
+                    </Paper>
+                    <Paper className="skills_type">
+                        Frontend
+                    </Paper>
+                    <Paper className="skills_type">
+                        Big Data Processing
+                    </Paper>
                 </div>
             </SkillsContainer>
         </React.Fragment>

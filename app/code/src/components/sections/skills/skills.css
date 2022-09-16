@@ -15,14 +15,21 @@
     align-items: center;
     align-content: center;
     color: crimson;
-    /* text-decoration-line: underline; */
 }
 
-/* #line {
-    width: 100%;
-    background-color: crimson;
-    height: 1px;
-} */
+.skills_first_row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+/* rgb(153, 118, 118)  */
+.skills_type {
+    width: 30%;
+    height: 25rem;
+    display: block;
+    background-color: rgb(165, 16, 46) !important
+}
 
 
 
