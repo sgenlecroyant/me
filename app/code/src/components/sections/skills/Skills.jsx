@@ -93,13 +93,29 @@ function Skills(props) {
             width: "100vw",
             height: "100vh",
             backgroundColor: "",
-            paddingTop: "8rem"
+            paddingTop: "8rem",
+            [theme.breakpoints.down('sm')]: {
+                paddingTop: "0px",
+                backgroundColor: "green",
+                marginTop: "-1rem"
+            },
+            [theme.breakpoints.down('sm')]: {
+                paddingTop: "0rem",
+                backgroundColor: "yellow",
+                marginTop: "1rem"
+            },
+
+            // [theme.breakpoints.up('lg')]: {
+            //     paddingTop: "0px",
+            //     backgroundColor: "blue",
+            //     marginTop: "0rem"
+            // }
         }
     })
 
     return (
         <React.Fragment>
-            <SkillsContainer>
+            <SkillsContainer className='skills_container'>
                 <div className="skills_skills_section">
                     <div className="title_and_icon">
                         <div>
@@ -107,6 +123,7 @@ function Skills(props) {
                         </div>
                         <div className="skills_title">Skills I have got so far</div>
                     </div>
+                    
                 </div>
             </SkillsContainer>
         </React.Fragment>

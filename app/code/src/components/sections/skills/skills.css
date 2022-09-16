@@ -1,12 +1,12 @@
 #skills_icon {
     width: 100px;
-    height: 100px; 
+    height: 100px;
 }
 
 .skills_title {
     font-size: 30px;
     margin-left: 20px;
-    text-transform: capitalize;
+    text-transform: lowercase;
 }
 
 .title_and_icon {
@@ -15,4 +15,38 @@
     align-items: center;
     align-content: center;
     color: crimson;
+    /* text-decoration-line: underline; */
 }
+
+/* #line {
+    width: 100%;
+    background-color: crimson;
+    height: 1px;
+} */
+
+
+
+@media screen and (max-width: 480px) {
+
+    #skills_icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .skills_title {
+        font-size: 20px;
+        margin-left: 12px;
+        text-transform: capitalize;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 915px) {
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+
+}
+
+@media screen and (min-width: 1300px) {}
