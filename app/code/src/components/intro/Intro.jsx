@@ -24,26 +24,36 @@ function Intro(props) {
         const destinationView = document.getElementById('skills')
         destinationView.scrollIntoView({ behavior: "smooth" })
     }
+
+    useEffect(() => {
+        const languageAnimate = document.querySelector('#languageAnimate')
+        init(languageAnimate, { showCursor: false, strings: ['Java', 'JavaScript', 'TypeScript'] })
+        
+        const paradigm_animate = document.querySelector('#paradigm_animate')
+        init(paradigm_animate, { showCursor: false, strings: ['Object-Oriented programming', 'Functional programming', 'Multithreaded-programming'] })
+    
+    }, [])
+
     return (
 
-        <React.Fragment>
+        <React.Fragment >
             <IntroContainer className="intro_container">
                 <div className="intro_right_side">
-                    <img className='profile' src={me} alt="profile"  />
-                    
+                    <img className='profile' src={me} alt="profile" />
+
                 </div>
                 <div className="intro_left_side">
-                    <div className="greetings">Thanks for tuning in, I am 
-                    <span id='first_name'> Franck </span> <span id="last_name">Nsabimana</span> 
+                    <div className="greetings">Thanks for tuning in, I am
+                        <span id='first_name'> Franck </span> <span id="last_name">Nsabimana</span>
                     </div>
                     <div>
                         I am a <span className="profession">Software </span> <span className="profession">Developer,</span>
                     </div>
                     <div className="action">
-                        <span>I use </span> <span className='tool'>Java</span>
+                        <span>I use </span> <span className='tool' id="languageAnimate" >Java</span>
                     </div>
                     <div className="action">
-                        <span>My favorite programming paradigms are </span> <span className='programming_paragigm'>OOP</span>
+                        <span>My favorite programming paradigms are </span> <span className='programming_paragigm' id='paradigm_animate'>OOP</span>
                     </div>
                 </div>
             </IntroContainer>
