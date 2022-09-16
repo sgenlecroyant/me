@@ -51,4 +51,9 @@
     .navbar {
         background-color: green;
     }
+
+    .menu {
+        color: crimson;
+        padding: 0px 08px;
+    }
 }

@@ -1,14 +1,14 @@
 
 .logo_menu {
     text-align: center;
-    color: crimson;
-    font-size: 10px;
+    color: white;
+    /* font-size: 30px; */
     border-bottom: 2px solid black;
     padding: 6px;
 }
 
 .skills-box{
-    background-color: #fff;
+    background-color: crimson;
     width: 180px;
     height: 50vh;
     position: fixed;
@@ -159,4 +159,25 @@
      /* 100% {
         transform: translateX(100px);
     } */
+}
+
+@media screen and (max-width: 480px) {
+    .logo_menu{
+        color: white;
+        font-weight: bolder;
+        font-style: italic;
+        font-family: cursive;
+        /* font-size: 100px; */
+        /* background-color: green; */
+    }
+    .item_text {
+        margin-left: -15px;
+        color: white;
+        font-size: x-small;
+        font-weight: 300;
+        font-weight: 900;
+    }
+    .item_icon {
+        color: white;
+    }
 }

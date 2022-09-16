@@ -49,7 +49,7 @@ function AppMenu(props: { handleMenuOptionClick: Function; showMenu: boolean }) 
                     <ListItem className='list_item_home'>
                         <IconButton className="item_button">
                             <ListItemButton>
-                            <School fontSize='small'/>
+                            <School className='item_icon' fontSize='small'/>
                             </ListItemButton>
                         </IconButton>
                         <ListItemText disableTypography primary="skills" className='item_text' />
@@ -57,7 +57,7 @@ function AppMenu(props: { handleMenuOptionClick: Function; showMenu: boolean }) 
                     <ListItem className='list_item_services'>
                         <IconButton className="item_button">
                             <ListItemButton>
-                                <AirlineSeatReclineNormal fontSize='small'/>
+                                <AirlineSeatReclineNormal className='item_icon' fontSize='small'/>
                             </ListItemButton>
                         </IconButton>
                         <ListItemText disableTypography primary="focus" className='item_text'></ListItemText>
@@ -65,7 +65,7 @@ function AppMenu(props: { handleMenuOptionClick: Function; showMenu: boolean }) 
                     <ListItem className='list_item_features'>
                         <IconButton className="item_button">
                             <ListItemButton>
-                                <Email fontSize='small'/>
+                                <Email fontSize='small' className='item_icon'/>
                             </ListItemButton>
                         </IconButton>
                         <ListItemText disableTypography primary="contact" className='item_text'></ListItemText>
@@ -73,7 +73,7 @@ function AppMenu(props: { handleMenuOptionClick: Function; showMenu: boolean }) 
                     <ListItem className='list_item_connect'>
                         <IconButton className="item_button">
                             <ListItemButton>
-                                <Handshake fontSize='small' />
+                                <Handshake fontSize='small' className='item_icon'/>
                             </ListItemButton>
                         </IconButton>
                         <ListItemText disableTypography primary="connect" className='item_text'></ListItemText>
