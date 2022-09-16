@@ -104,36 +104,9 @@ function Intro(props) {
     }
     return (
 
-        <MyStyledIntro >
-            <MyIntroProfileImage className='intro-profile-image'>
-                <MyIntroImage src={me} alt="mine image" >
-                   
-                </MyIntroImage>
-            </MyIntroProfileImage>
-            <MyIntroText>
-                <div className='innner-intro-wrapper'>
-                    <span className='intro-inner-title'>I use:</span>
-                    <span>
-                    <ul className='list'>
-                        <li className='intro-inner-item'>Java</li>
-                        <li className='intro-inner-item'>JavaScript</li>
-                        <li className='intro-inner-item'>TypeScript</li>
-                    </ul>
-                    </span>
-                    <span >
-                    <span className='intro-inner-title'>My favorites programming paradigms:</span>
-                    <ul className='list'>
-                        <li className='intro-inner-item'>OOP</li>
-                        <li className='intro-inner-item'>Functional Programming</li>
-                        <li className='intro-inner-item'>Multithreaded-Programmming</li>
-                    </ul>
-                    </span>
-                </div>
-                {/* <div>
-                <MyKeyboardArrowDown/>
-                </div> */}
-            </MyIntroText>
-        </MyStyledIntro>
+        <React.Fragment>
+            intro section
+        </React.Fragment>
     )
 }
 

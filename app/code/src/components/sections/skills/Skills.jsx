@@ -63,67 +63,10 @@ function Skills(props) {
         })
         setSkillsTabArray(selectedAtInitialState)
     }, [])
-    const MySkillsWrapper = styled(Box)(({ theme }) => {
-        return {
-            backgroundColor: "lightblue",
-            height: "100vh",
-            paddingTop: "60px",
-            [theme.breakpoints.down('sm')]: {
-                height: "160vh"
-            }
-        }
-    })
 
-    const MySkillsBox = styled(Box)(({ theme }) => {
-        return {
-            marginTop: "2%",
-            display: "flex",
-            justifyContent: "space-around",
-            [theme.breakpoints.down('sm')]: {
-                display: "block"
-            }
-        }
-    })
-    const SkillsTitleStyle = {
-        paddingTop: '6%',
-        textAlign: 'center',
-        fontSize: "30px",
-        fontWeight: "900"
-    }
-
-    const MyStyledSkillsTab = styled('div')(({ theme }) => {
-        return {
-            textAlign: 'center',
-            fontSize: "15px",
-            fontWeight: "900",
-            backgroundColor: "black",
-            color: "white",
-            border: "1px solid",
-            height: "30px",
-            borderRadius: "80px",
-            width: "16%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            cursor: "pointer",
-            [theme.breakpoints.down('sm')]: {
-                width: "100%"
-            }
-        }
-    })
-
-    const SelectedTabDetails = styled(Box)(({ theme }) => {
-        return {
-            display: "flex",
-            justifyContent: "space-between",
-            height: "100%",
-            // alignItems: "center",
-            // alignContent: "center"
-        }
-    })
+    
 
     const handleSkillsTabClick = (event, tabElement) => {
-
 
         if (!tabElement.isSelected) {
             var unselectedTabs = skillsTabArray.map((tabElt) => tabElt.isSelected ? { ...tabElt, isSelected: false } : { ...tabElt });
@@ -145,17 +88,9 @@ function Skills(props) {
     }
 
     return (
-        <MySkillsWrapper id="skills">
-            <Typography style={SkillsTitleStyle}>Skills</Typography>
-            <MySkillsBox>
-                {skillsTabArray.map((tabElement) => {
-                    return <MyStyledSkillsTab style={{ opacity: tabElement.isSelected ? 1 : 0.4 }} key={tabElement.id} className={tabElement.className} title={tabElement.title} onClick={(event) => handleSkillsTabClick(event, tabElement)}>{tabElement.title}</MyStyledSkillsTab>
-                })}
-            </MySkillsBox>
-            <SelectedTabDetails>
-                {RenderUtil.renderTabDetails(selectedTabElementDetails.title)}
-            </SelectedTabDetails>
-        </MySkillsWrapper>
+        <React.Fragment>
+            skills section
+        </React.Fragment>
     )
 }
 

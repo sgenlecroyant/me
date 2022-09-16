@@ -12,9 +12,9 @@ function Home(props) {
         };
     });
   return (
-    <MyDiv>
-       <div id={props.id}>{props.data}</div>
-    </MyDiv>
+    <React.Fragment>
+      home section
+    </React.Fragment>
   )
 }
 

@@ -30,17 +30,9 @@ function Focus() {
         }
     })
   return (
-    <div id='focus'>
-        <MyFocusWrapper className='focus-wrapper'>
-            <Typography textAlign={'center'} style={{fontFamily: "monospace", display: "block", borderBottom: "3px solid black",paddingBottom: "0px", margin: "0px auto", backgroundColor: "", width: "190px"}}>I mainly focus on: </Typography>
-            <MyFocusInnerWrapper className='wrapper'>
-                <li>Backend Development</li>
-                <li>Microservices</li>
-                <li>Distributed Systems</li>
-                <li>Big Data</li>
-            </MyFocusInnerWrapper>
-        </MyFocusWrapper>
-    </div>
+    <React.Fragment>
+        focus section
+    </React.Fragment>
   )
 }
 

@@ -34,7 +34,6 @@ function App() {
           <Intro />
           <Sections>
             <Skills />
-            <Skills3D />
             <Focus/>
             <Contact />
             <Social />

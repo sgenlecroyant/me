@@ -1,10 +1,47 @@
-.rightside-icon {
-    margin-left: 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+:root {
+    --defaultFontSize: 1.2rem;
 }
 
-.mail-icon{
+.logo {
+    color: white;
+    font-size: var(--defaultFontSize);
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+.right_side .links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    color: green;
+    list-style-type: none;
+
+}
+
+.right_side .links li a{
+    margin: 0px 10px;
+    text-transform: uppercase;
+    font-size: var(--defaultFontSize);
+    color: whitesmoke;
     
+}
+
+.right_side .links li a:hover{
+    border-bottom: 5px solid black;
+}
+
+.menu {
+    display: none;
+}
+
+@media screen and (max-width: 480px) {
+    .right_side {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
 }
