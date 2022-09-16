@@ -1,6 +1,7 @@
 import { Box, styled, Typography } from '@mui/material'
 import React from 'react'
 import './focus.css'
+import image from '../../assets/images/clippy.png'
 
 function Focus() {
 
@@ -29,11 +30,16 @@ function Focus() {
 
         }
     })
-  return (
-    <React.Fragment>
-        focus section
-    </React.Fragment>
-  )
+    return (
+        <React.Fragment>
+            <div className='clippy-cont '>
+                <div className='clippy'>clippy</div>
+
+                {/* <img className='clippy' src={image} alt="test clippy" /> */}
+            </div>
+
+        </React.Fragment>
+    )
 }
 
 export default Focus

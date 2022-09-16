@@ -53,7 +53,9 @@ function Intro(props) {
                         <span>I use </span> <span className='tool' id="languageAnimate" >Java</span>
                     </div>
                     <div className="action">
-                        <span>My favorite programming paradigms are </span> <span className='programming_paragigm' id='paradigm_animate'>OOP</span>
+                        <span className='favorites_paradigms'>My favorite programming paradigms are:</span> 
+                        {/* <span className='programming_paragigm' id='paradigm_animate'>OOP</span> */}
+                        <div className='tool'>Java, Functional programming and Multithreaded-programming</div>
                     </div>
                 </div>
             </IntroContainer>

@@ -7,8 +7,18 @@
 }
 
 .intro_left_side {
-    flex: 4;
-    background-color: "";
+    flex: 7;
+    background-image: url('../../assets/images/clippy.png');
+    background-attachment: scroll;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    display: block;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-left: 10rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: white;
 }
 
 .profile {
@@ -27,21 +37,31 @@
     align-content: center;
     padding-top: 15px;
 
-    line-height: 2rem;
+    line-height: 26px;
 }
 
 #first_name,
-#last_name {
-    color: crimson;
+#last_name, .tool {
+    color: black;
     font-style: italic;
     font-size: 1.2rem;
     font-weight: 900;
 }
 
-.profession,
-.tool,
-.programming_paragigm {
-    color: crimson
+
+.favorites_paradigms {
+    margin-bottom: 80px;
+    /* padding-left: 3rem; */
+    color: black;
+    border-bottom: 2px solid white;
+    /* display: block; */
+}
+
+.tool {
+    margin-top: 30px;
+    transform: rotate(-15deg);
+    padding-top: 2rem;
+    color: white;
 }
 
 @media screen and (max-width: 480px) {
