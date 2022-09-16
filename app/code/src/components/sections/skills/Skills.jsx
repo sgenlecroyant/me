@@ -5,7 +5,7 @@ import SkillsTab from './SkillsTab'
 import './skills.css'
 import { RenderUtil } from '../../util/RenderUtil'
 import { School } from '@mui/icons-material'
-
+import spring from '../../../assets/images/spring 2.svg'
 function Skills(props) {
     const [selectedTabElementDetails, setSelectedTabElementDetails] = useState({ id: 0, title: "", isSelected: false, className: "" })
     const [skillsTabArray, setSkillsTabArray] = useState([
@@ -126,13 +126,22 @@ function Skills(props) {
                 </div>
                 <div className="skills_first_row">
                     <Paper className="skills_type">
-                        Backend
+                        <div className="skill_type_title">
+                            Backend
+                        </div>
+                        <div className="backend_skills">
+                            <img src={spring} alt="spring framework" />
+                        </div>
                     </Paper>
                     <Paper className="skills_type">
-                        Frontend
+                        <div className="skill_type_title">
+                            Frontend
+                        </div>
                     </Paper>
                     <Paper className="skills_type">
-                        Big Data Processing
+                        <div className="skill_type_title">
+                            Big Data Processing
+                        </div>
                     </Paper>
                 </div>
             </SkillsContainer>
