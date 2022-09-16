@@ -14,10 +14,15 @@ function AppBar() {
             justifyContent: "space-between",
             alignItems: "center",
             alignContent: "center",
-            backgroundColor: "crimson",
+            backgroundColor: "white",
             padding: "0px 20px",
             width: "100vw",
-            margin: "10px"
+            margin: "10px",
+            color: "crimson",
+            [theme.breakpoints.down('sm')]: {
+                // backgroundColor: "green",
+                padding: "0px 5px"
+            }
         }
     })
 

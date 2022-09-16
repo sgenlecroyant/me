@@ -3,7 +3,7 @@
 }
 
 .logo {
-    color: white;
+
     font-size: 1.6rem;
     font-weight: 900;
     font-style: italic;
@@ -15,7 +15,6 @@
     justify-content: space-around;
     align-items: center;
     align-content: center;
-    color: green;
     list-style-type: none;
 
 }
@@ -24,7 +23,7 @@
     margin: 0px 10px;
     text-transform: uppercase;
     font-size: var(--defaultFontSize);
-    color: whitesmoke;
+    color: crimson
     
 }
 
@@ -48,5 +47,8 @@
 
     .logo {
         font-size: var(--defaultFontSize);
+    }
+    .navbar {
+        background-color: green;
     }
 }
