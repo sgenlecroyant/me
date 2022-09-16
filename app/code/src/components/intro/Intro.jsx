@@ -36,14 +36,14 @@ function Intro(props) {
                     <div className="greetings">Thanks for tuning in, I am 
                     <span id='first_name'> Franck </span> <span id="last_name">Nsabimana</span> 
                     </div>
-                    <div className="profession">
-                        I am a <span>Software </span> <span>Developer.</span>
+                    <div>
+                        I am a <span className="profession">Software </span> <span className="profession">Developer,</span>
                     </div>
                     <div className="action">
-                        <span>I use </span> <span>Java</span>
+                        <span>I use </span> <span className='tool'>Java</span>
                     </div>
                     <div className="action">
-                        <span>My favorite programming paradigms are </span> <span>OOP</span>
+                        <span>My favorite programming paradigms are </span> <span className='programming_paragigm'>OOP</span>
                     </div>
                 </div>
             </IntroContainer>
