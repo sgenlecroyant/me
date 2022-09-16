@@ -28,7 +28,7 @@ function Contact() {
     };
     return (
         <React.Fragment>
-            contact form
+            <div>Ccntact</div>
         </React.Fragment>
     )
 }

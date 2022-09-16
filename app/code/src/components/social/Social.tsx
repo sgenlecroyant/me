@@ -7,7 +7,7 @@ function Social() {
     
   return (
     <React.Fragment>
-        socials section
+        <div>socials section</div>
     </React.Fragment>  )
 }
 

@@ -27,6 +27,7 @@ import jenkins from '../../../assets/images/jenkins.svg'
 import git from '../../../assets/images/git.svg'
 import github from '../../../assets/images/github.svg'
 import typescript from '../../../assets/images/typescript.svg'
+import jpa from '../../../assets/images/jpa 2.png'
 
 
 function Skills(props) {
@@ -114,7 +115,7 @@ function Skills(props) {
     const SkillsContainer = styled(Box)(({ theme }) => {
         return {
             width: "100vw",
-            height: "120vh",
+            height: "135vh",
             backgroundColor: "",
             paddingTop: "8rem",
             [theme.breakpoints.down('sm')]: {
@@ -148,19 +149,17 @@ function Skills(props) {
                     </div>
                 </div>
                 <div className="skills_first_row">
-                    <Paper elevation={5} className="skills_type">
+                    <Paper elevation={3} className="skills_type">
                         <div className="skill_type_title">
                             Backend
                         </div>
                         <div className="backend_skills">
-                            <img className="tech_icon" src={java} alt="spring framework" />
+                            <img className="tech_icon" src={java} alt="java" />
                             <img className="tech_icon" src={spring} alt="spring framework" />
-                            <img className="tech_icon" src={kafka} alt="spring framework" />
-                            <img className="tech_icon" src={maven} alt="spring framework" />
-                            <img className="tech_icon" src={gradle2} alt="spring framework" />
+                            <img className="tech_icon" src={kafka} alt="kafka" />
                         </div>
                     </Paper>
-                    <Paper className="skills_type">
+                    <Paper elevation={3} className="skills_type">
                         <div className="skill_type_title">
                             Frontend
                         </div>
@@ -172,7 +171,7 @@ function Skills(props) {
                             <img className="tech_icon" src={redux} alt="redux" />
                         </div>
                     </Paper>
-                    <Paper className="skills_type">
+                    <Paper elevation={3} className="skills_type">
                         <div className="skill_type_title">
                             Big Data Processing
                         </div>
@@ -185,8 +184,8 @@ function Skills(props) {
 
               
 
-                <div className="skills_first_row">
-                    <Paper elevation={5} className="skills_type">
+                <div className="skills_second_row">
+                    <Paper elevation={3} className="skills_type">
                         <div className="skill_type_title">
                             Databases
                         </div>
@@ -194,9 +193,11 @@ function Skills(props) {
                             <img className="tech_icon" src={mysql} alt="mysql" />
                             <img className="tech_icon" src={postgresql} alt="postgres" />
                             <img className="tech_icon" src={elasticsearch2} alt="elasticsearch" />
+                            <img className="tech_icon" src={hibernate} alt="hibernate" />
+                            <img className="tech_icon" src={jpa} alt="jpa" />
                         </div>
                     </Paper>
-                    <Paper className="skills_type">
+                    <Paper elevation={3} className="skills_type">
                         <div className="skill_type_title">
                             CI/CD
                         </div>
@@ -204,7 +205,7 @@ function Skills(props) {
                             <img className="tech_icon" src={jenkins} alt="mysql" />
                         </div>
                     </Paper>
-                    <Paper className="skills_type">
+                    <Paper elevation={3} className="skills_type">
                         <div className="skill_type_title">
                            VCS/SCM
                         </div>
@@ -215,14 +216,32 @@ function Skills(props) {
                     </Paper>
                 </div>
 
-                
-                <div className="skills_first_row">
-                    <Paper className="skills_type">
+                <div className="skills_third_row">
+                    <Paper elevation={3} className="skills_type">
                         <div className="skill_type_title">
-                           ORM Tools
+                            Build Tools
+                        </div>
+                        <div className="build_tools_skills">
+                            <img className="tech_icon" src={maven} alt="maven" />
+                            <img className="tech_icon" src={gradle2} alt="gradle" />
                         </div>
                     </Paper>
+                    <Paper elevation={3} className="skills_type">
+                        <div className="skill_type_title">
+                            Containerization
+                        </div>
+                        <div className="containerization_skills">
+                            <img className="tech_icon" src={docker} alt="docker" />
+                        </div>
+                    </Paper>
+                    <Paper elevation={3} className="skills_type">
+                        <div className="skill_type_title">
+                           other story, ...
+                        </div>
+                        
+                    </Paper>
                 </div>
+
             </SkillsContainer>
         </React.Fragment>
     )

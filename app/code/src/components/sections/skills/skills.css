@@ -17,7 +17,7 @@
     color: crimson;
 }
 
-.skills_first_row {
+.skills_first_row, .skills_second_row, .skills_third_row {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -30,6 +30,11 @@
     display: block;
     /* background-color: rgb(165, 16, 46) !important */
     /* background-color: rgb(252, 214, 214); */
+}
+
+.skills_type:hover {
+    background-color: rgb(165, 16, 46) !important;
+    cursor: pointer;
 }
 
 .skill_type_title{
