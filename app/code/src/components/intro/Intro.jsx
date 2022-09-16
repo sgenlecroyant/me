@@ -32,7 +32,20 @@ function Intro(props) {
                     <img className='profile' src={me} alt="profile"  />
                     
                 </div>
-                <div className="intro_left_side">left</div>
+                <div className="intro_left_side">
+                    <div className="greetings">Thanks for tuning in, I am 
+                    <span id='first_name'> Franck </span> <span id="last_name">Nsabimana</span> 
+                    </div>
+                    <div className="profession">
+                        I am a <span>Software </span> <span>Developer.</span>
+                    </div>
+                    <div className="action">
+                        <span>I use </span> <span>Java</span>
+                    </div>
+                    <div className="action">
+                        <span>My favorite programming paradigms are </span> <span>OOP</span>
+                    </div>
+                </div>
             </IntroContainer>
         </React.Fragment>
     )
