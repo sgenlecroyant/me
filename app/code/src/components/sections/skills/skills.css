@@ -1,0 +1,18 @@
+#skills_icon {
+    width: 100px;
+    height: 100px; 
+}
+
+.skills_title {
+    font-size: 30px;
+    margin-left: 20px;
+    text-transform: capitalize;
+}
+
+.title_and_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: crimson;
+}

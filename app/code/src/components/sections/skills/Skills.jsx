@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import SkillsTab from './SkillsTab'
 import './skills.css'
 import { RenderUtil } from '../../util/RenderUtil'
+import { School } from '@mui/icons-material'
 
 function Skills(props) {
     const [selectedTabElementDetails, setSelectedTabElementDetails] = useState({ id: 0, title: "", isSelected: false, className: "" })
@@ -87,9 +88,27 @@ function Skills(props) {
         console.log("selecting", tabElement)
     }
 
+    const SkillsContainer = styled(Box)(({theme}) => {
+        return {
+            width: "100vw",
+            height: "100vh",
+            backgroundColor: "",
+            paddingTop: "8rem"
+        }
+    })
+
     return (
         <React.Fragment>
-            skills section
+            <SkillsContainer>
+                <div className="skills_skills_section">
+                    <div className="title_and_icon">
+                        <div>
+                            <School id="skills_icon"/>
+                        </div>
+                        <div className="skills_title">Skills I have got so far</div>
+                    </div>
+                </div>
+            </SkillsContainer>
         </React.Fragment>
     )
 }

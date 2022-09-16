@@ -44,7 +44,7 @@ function AppMenu(props: { handleMenuOptionClick: Function; showMenu: boolean }) 
     return (
         <React.Fragment >
             {props.showMenu && <div className='skills-box' ref={wrapperRef}>
-                <Typography className='logo_menu'>CodeDebug</Typography>
+                <div  className='logo_menu'>CodeDebug</div>
                 <List>
                     <ListItem className='list_item_home'>
                         <IconButton className="item_button">
