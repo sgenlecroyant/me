@@ -1,6 +1,7 @@
 import { Box, Button, styled, TextField, Typography } from '@mui/material'
-import React from 'react'
+import React, { useRef } from 'react'
 import "./contact.css"
+import emailjs from '@emailjs/browser';
 
 function Contact() {
 
@@ -18,7 +19,7 @@ function Contact() {
             textAlign: "center"
         }
     })
-     
+
 
     const MyContactForm = styled(Box)(({ theme }) => {
         return {
@@ -53,8 +54,8 @@ function Contact() {
             marginTop: "10px",
             justifyContent: "space-between",
             [theme.breakpoints.down('md')]: {
-               display: "block",
-            //    marginTop: "10px"
+                display: "block",
+                //    marginTop: "10px"
             }
         }
     })
@@ -81,9 +82,30 @@ function Contact() {
             }
         }
     })
+
+    const form = useRef();
+
+    // user_name: is used for name
+    // user_email: is used for email origin address
+
+    // message: is used for message
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_qa0kuvb', 'template_x9daifj', form.current, 'csI6U3DLPILQ6sPFN')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            }).then((e) => {
+                console.log("email sent: ", e)
+            }).catch((e) => {
+                console.log("exception occurred: " , e)
+            })
+    };
     return (
         <React.Fragment>
-            <MyContactWrapper id="contact">
+            {/* <MyContactWrapper id="contact">
                 <MyContactForm>
                     <MyContactFormTitle>Let's connect</MyContactFormTitle>
                     <MyBox>
@@ -96,7 +118,17 @@ function Contact() {
                     <MySubmitButton className='submit-btn' variant='outlined' size='small'>send</MySubmitButton>
                 </MyContactForm>
                 
-            </MyContactWrapper>
+            </MyContactWrapper> */}
+
+<form ref={form} onSubmit={sendEmail}>
+      <label>Name</label>
+      <input type="text" name="user_name" />
+      <label>Email</label>
+      <input type="email" name="user_email" />
+      <label>Message</label>
+      <textarea name="message" />
+      <input type="submit" value="Send" />
+    </form>
         </React.Fragment>
     )
 }
