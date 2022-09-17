@@ -154,9 +154,21 @@ function Skills(props) {
                             Backend
                         </div>
                         <div className="backend_skills">
-                            <img className="tech_icon" src={java} alt="java" />
-                            <img className="tech_icon" src={spring} alt="spring framework" />
-                            <img className="tech_icon" src={kafka} alt="kafka" />
+                            <div className="java">
+                                <img className="tech_icon" src={java} alt="java" />
+                                <div className="details">Java is one of the most popular, highly reliable due to its huge ecosystem which is full of libraries and stability on its own  programming languages</div>
+                            </div>
+                            <div className="spring">
+                                <img className="tech_icon" src={spring} alt="spring framework" />
+                                <div className="details">Spring is the top-one choice for building backend systems in Java, it's powerful and give thousands of methods and strategies to do stuffs, it's opinionated and highly configurable</div>
+                            </div>
+                            <div className="kafka">
+                                <img className="tech_icon" src={kafka} alt="kafka" />
+                                <div className="details">
+                                    Being one of the top-choice for building data pipelines, it introduces lots of advantages that we need in microservices,
+                                    from event-sourcing to distributed transactions
+                                </div>
+                            </div>
                         </div>
                     </Paper>
                     <Paper elevation={3} className="skills_type">
@@ -164,11 +176,40 @@ function Skills(props) {
                             Frontend
                         </div>
                         <div className="frontend_skills">
+                            <div className="javascript">
                             <img className="tech_icon" src={javascript} alt="spring framework" />
-                            <img className="tech_icon" src={reactjs} alt="reactjs" />
+                            <div className="details">javascript</div>
+                            </div>
+
+                            <div className="typescript">
                             <img className="tech_icon" src={typescript} alt="typescript" />
+                            <div className="details">
+                                typescript
+                            </div>
+                            </div>
+                           <div className="reactjs">
+                           <img className="tech_icon" src={reactjs} alt="reactjs" />
+
+                           <div className="details">
+                               reactjs 
+                           </div>
+                           </div>
+                            
+                            <div className="material_ui">
                             <img className="tech_icon" src={materialUI} alt="material ui" />
+
+                            <div className="details">
+                                material ui
+                            </div>
+                            </div>
+
+                            <div className="redux">
                             <img className="tech_icon" src={redux} alt="redux" />
+
+                            <div className="details">
+                                redux
+                            </div>
+                            </div>
                         </div>
                     </Paper>
                     <Paper elevation={3} className="skills_type">
@@ -176,13 +217,13 @@ function Skills(props) {
                             Big Data Processing
                         </div>
                         <div className="big_data_skills">
-                        <img className="tech_icon" src={java} alt="java" />
+                            <img className="tech_icon" src={java} alt="java" />
                             <img className="tech_icon" src={kafkaStreams} alt="kafka streams" />
                         </div>
                     </Paper>
                 </div>
 
-              
+
 
                 <div className="skills_second_row">
                     <Paper elevation={3} className="skills_type">
@@ -207,7 +248,7 @@ function Skills(props) {
                     </Paper>
                     <Paper elevation={3} className="skills_type">
                         <div className="skill_type_title">
-                           VCS/SCM
+                            VCS/SCM
                         </div>
                         <div className="vcs_skills">
                             <img className="tech_icon" src={git} alt="mysql" />
@@ -236,9 +277,9 @@ function Skills(props) {
                     </Paper>
                     <Paper elevation={3} className="skills_type">
                         <div className="skill_type_title">
-                           other story, ...
+                            other story, ...
                         </div>
-                        
+
                     </Paper>
                 </div>
 
