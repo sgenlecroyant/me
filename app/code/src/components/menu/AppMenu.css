@@ -8,13 +8,14 @@
 }
 
 .skills-box{
-    background-color: crimson;
+    background-color: white;
     width: 180px;
     height: 50vh;
     position: fixed;
     top: 0px;
     left: 0px;
     z-index: 3;
+
 
     border-top: 0px solid crimson;
     border-left: 0px solid crimson;
@@ -27,6 +28,7 @@
     animation-iteration-count: 1;
 
     border-bottom-right-radius: 50px;
+    box-shadow: 0 0 4px;
 }
 
 @keyframes app-menu {
@@ -148,12 +150,12 @@
     
     0% {
        transform: translateX(100px);
-       color: whitesmoke
+       color: crimson
     }
 
     50% {
         transform: translateX(100px) ;
-        color: whitesmoke;
+        color: crimson
     } 
 
      /* 100% {
@@ -163,7 +165,7 @@
 
 @media screen and (max-width: 480px) {
     .logo_menu{
-        color: #fff;
+        color: crimson;
         font-weight: bolder;
         font-style: italic;
         font-size: 1rem;
@@ -171,12 +173,12 @@
     }
     .item_text {
         margin-left: -15px;
-        color: white;
+        color: crimson;
         font-size: x-small;
         font-weight: 300;
         font-weight: 900;
     }
     .item_icon {
-        color: white;
+        color: crimson;
     }
 }

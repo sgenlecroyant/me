@@ -44,22 +44,20 @@ function Intro(props) {
                 </div>
                 <div className="intro_left_side">
                     <div className="intro_text_top">
-                        <div className="greetings">Thanks for tuning in, I am
-                            <span id='first_name'> Franck </span> <span id="last_name">Nsabimana</span>
+                        <div className="greetings">Thanks for tuning in.
                         </div>
-                        <div>
-                            <span className='greetings'>I am a </span> <span className="profession">Software </span> <span className="profession">Developer,</span>
-                        </div>
-                        <div className="action">
-                            <span className='greetings'>I use </span> <span className='tool' id="languageAnimate">Java</span>
-                        </div>
+                        <div id='first_name'> Franck Nsabimana, </div> 
+                        <div className='greetings_title'>I am a passionate Software Developer </div>
+                            <div className='greetings_tool'>I use <span className='language' id="languageAnimate">Java</span> </div> 
                     </div>
                     <div className="intro_text_bottom">
-                        <span className='favorites_paradigms'></span>
-                        {/* <span className='programming_paragigm' id='paradigm_animate'>OOP</span> */}
                         <div className='tool'>
-                        My favorite programming paradigms are: <br/>
-                            OO programming, Functional programming and <span style={{marginLeft: "7rem", transform: "rotateY(10deg)"}}>Multithreaded-programming</span> </div>
+                            {/* My favorite programming paradigms are: <br/>
+                            OO programming, Functional programming and  */}
+
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, temporibus dicta? Magni quisquam tempora quidem.
+                            Lorem ipsum dolor sit. Lorem, ipsum dolor.
+                            </div>
                     </div>
                 </div>
             </IntroContainer>

@@ -156,17 +156,25 @@ function Skills(props) {
                         <div className="backend_skills">
                             <div className="java">
                                 <img className="tech_icon" src={java} alt="java" />
-                                <div className="details">Java is one of the most popular, highly reliable due to its huge ecosystem which is full of libraries and stability on its own  programming languages</div>
+                                <div className="skill_details_box">
+                                    <div className="details">Java </div>
+                                    <div className='details_explain' > One of popular general purpose programming languages</div>
+                                </div>
                             </div>
                             <div className="spring">
                                 <img className="tech_icon" src={spring} alt="spring framework" />
-                                <div className="details">Spring is the top-one choice for building backend systems in Java, it's powerful and give thousands of methods and strategies to do stuffs, it's opinionated and highly configurable</div>
+                                <div className="skill_details_box">
+                                    <div className="details">Spring</div>
+                                    <div className="details_explain">Building backend systems in Java.</div>
+                                </div>
                             </div>
                             <div className="kafka">
                                 <img className="tech_icon" src={kafka} alt="kafka" />
-                                <div className="details">
-                                    Being one of the top-choice for building data pipelines, it introduces lots of advantages that we need in microservices,
-                                    from event-sourcing to distributed transactions
+                                <div className="skill_details_box">
+                                    <div className="details">Kafka</div>
+                                    <div className="details_explain">
+                                    Building data pipelines and event-driven systems
+                                </div>
                                 </div>
                             </div>
                         </div>
@@ -177,38 +185,58 @@ function Skills(props) {
                         </div>
                         <div className="frontend_skills">
                             <div className="javascript">
-                            <img className="tech_icon" src={javascript} alt="spring framework" />
-                            <div className="details">javascript</div>
+                                <img className="tech_icon" src={javascript} alt="spring framework" />
+                                <div className='skill_details_box'>
+                                    <div className='details'>JavaScript</div>
+                                    <div className="details_explain">The language of the web.</div>
+                                </div>
                             </div>
 
                             <div className="typescript">
-                            <img className="tech_icon" src={typescript} alt="typescript" />
-                            <div className="details">
-                                typescript
+                                <img className="tech_icon" src={typescript} alt="typescript" />
+                                <div className='skill_details_box'>
+                                    <div className='details'> Typescript</div>
+                                    <div className="details_explain">
+                                        Superset of Javascript
+                                    </div>
+                                </div>
                             </div>
-                            </div>
-                           <div className="reactjs">
-                           <img className="tech_icon" src={reactjs} alt="reactjs" />
+                            <div className="reactjs">
+                                <img className="tech_icon" src={reactjs} alt="reactjs" />
 
-                           <div className="details">
-                               reactjs 
-                           </div>
-                           </div>
-                            
+                                <div className='skill_details_box'>
+                                    <div className="details">ReactJS</div>
+                                    <div className="details_explain">
+                                        Building web user interfaces.
+                                    </div>
+                                </div>
+                            </div>
+
                             <div className="material_ui">
-                            <img className="tech_icon" src={materialUI} alt="material ui" />
+                                <img className="tech_icon" src={materialUI} alt="material ui" />
 
-                            <div className="details">
-                                material ui
-                            </div>
+                                <div className="skill_details_box">
+                                    <div className="details">
+                                        Material UI
+                                    </div>
+                                    <div className="details_explain">
+                                    Design UIs quickly.
+                                </div>
+                                </div>
                             </div>
 
                             <div className="redux">
-                            <img className="tech_icon" src={redux} alt="redux" />
+                                <img className="tech_icon" src={redux} alt="redux" />
 
-                            <div className="details">
-                                redux
-                            </div>
+                                <div className="skill_details_box">
+                                    <div className="details">
+                                    Redux
+                                    </div>
+                                    <div className="details_explain">
+                                    Application State Management tool.
+                                </div>
+                                </div>
+                                
                             </div>
                         </div>
                     </Paper>
@@ -217,8 +245,39 @@ function Skills(props) {
                             Big Data Processing
                         </div>
                         <div className="big_data_skills">
-                            <img className="tech_icon" src={java} alt="java" />
-                            <img className="tech_icon" src={kafkaStreams} alt="kafka streams" />
+                            <div className="java">
+                                <img className="tech_icon" src={java} alt="java" />
+
+                                <div className="skill_details_box">
+                                    
+                                <div className="details">
+                                    Java
+                                </div>
+                                <div className="details_explain">
+                                    Proven highly scalabale and reliable in big data technology
+                                </div>
+                                    
+                                </div>
+                                
+                            </div>
+
+                            <div className="kafka_streams">
+                                <img className="tech_icon" src={kafkaStreams} alt="kafka streams" />
+                                
+                                <div className="skill_details_box">
+                                    
+                                <div className="details">
+                                    KafkaStreams
+                                </div>
+                                <div className="details_explain">
+                                    Processing, transforming and enriching data at a high scale,
+                                    relatively new to the field, got matured back in 2017. It's one of the top contenders alongside Apache Spark Streaming, NiFi, Hadoop and Apache Flink. 
+                                </div>
+                                    
+                                </div>
+                                
+                            </div>
+
                         </div>
                     </Paper>
                 </div>
@@ -230,7 +289,7 @@ function Skills(props) {
                         <div className="skill_type_title">
                             Databases
                         </div>
-                        <div className="backend_skills">
+                        <div className="database_skills">
                             <img className="tech_icon" src={mysql} alt="mysql" />
                             <img className="tech_icon" src={postgresql} alt="postgres" />
                             <img className="tech_icon" src={elasticsearch2} alt="elasticsearch" />

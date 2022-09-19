@@ -6,7 +6,8 @@
 .skills_title {
     font-size: 30px;
     margin-left: 20px;
-    text-transform: lowercase;
+    text-transform: capitalize;
+    font-family: 'Freehand', cursive;
 }
 
 .title_and_icon {
@@ -17,34 +18,41 @@
     color: crimson;
 }
 
-.skills_first_row, .skills_second_row, .skills_third_row {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 20px;
+.skills_first_row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 10px 30px;
+    padding: 3rem 10px;
+
 }
-/* rgb(153, 118, 118)  */
+
 .skills_type {
-    width: 30%;
-    height: 25rem;
-    display: block;
-    /* background-color: rgb(165, 16, 46) !important */
-    /* background-color: rgb(252, 214, 214); */
+    border-radius: 15px !important;
 }
+
+.skills_type:hover {
+    /* background-color: beig; */
+    color: #3a3e59;
+    border-radius: 15px;
+    background-color: rgb(248, 223, 191);
+}
+
+.skills_first_row, .skills_second_row, .skills_third_row {
+   
+}
+
 
 
 
 .skill_type_title{
     text-align: center;
     padding-top: 10px;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    font-family: 'Freehand', cursive;
+    color: #3a3e59;
 }
-/* .skill_type_title::after{
-    content: "";
-    width: 100%;
-    height: 2px;
-    border-bottom: 4px solid black;
-    display: block;
-} */
 
 
 .tech_icon {
@@ -54,34 +62,48 @@
     object-fit: cover;
 }
 
-.backend_skills {
-    display: flex;
-    justify-content: space-between;
-    /* align-items: center; */
-    align-content: center;
-    flex-direction: column;
-    color: crimson;
-}
 
-.backend_skills:hover{
-    color: white;
-}
-
-.skills_type:hover {
-    background-color: rgb(165, 16, 46) !important;
-    cursor: pointer;
-    color: white;
-}
-
-.java, .spring, .kafka {
+.java, .spring, .kafka{
     display: flex;
     align-items: center;
     margin-left: 20px;
     margin-top: 30px;
 }
+.javascript, .typescript, .material_ui, .redux, .reactjs, .kafka_streams {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.redux {
+    margin-bottom: 5px;
+}
+
+.skill_details_box {
+    margin-left: 35px;
+    /* text-align: center; */
+}
+
 
 .details {
-    margin-left: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    /* text-align: center; */
+    border-bottom: 1px solid #3a3e59;
+    display: inline-block;
+    padding: 3px;
+    
+} 
+
+.details_explain {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    opacity: 0.5;
+    /* text-align: center; */
+
+    display: flex;
+    justify-content: center;
+    padding: 3px;
 }
 
 @media screen and (max-width: 480px) {
