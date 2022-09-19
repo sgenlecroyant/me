@@ -114,8 +114,37 @@
 @media screen and (max-width: 480px) {
 
     .intro_container {
-        flex-direction: column;
+       display: flex;
+       flex-direction: column;
+    }
 
+    .intro_left_side {
+        line-height: 0px;
+        padding: 0px 0px;   
+
+    }
+
+    #first_name{
+        font-size: 1rem;
+        /* text-align: center; */
+    }
+    #last_name, 
+    .tool {
+        font-size: 0.4rem;
+    }
+
+    .greetings {
+        font-size: 6px;
+        
+    }
+
+    .greetings_title{
+        font-size: 10px;
+        text-align: center;
+    }
+    
+    .greetings_tool {
+        font-size: 10px;
     }
 
     .profile {
@@ -129,7 +158,7 @@
         height: 200px;
         /* background-color: green; */
         margin: 0px auto;
-        line-height: 1.2rem
+        line-height: 10px
     }
 
     .programming_paragigm {

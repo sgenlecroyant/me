@@ -13,7 +13,10 @@ function Intro(props) {
         return {
             display: "flex",
             justifyContent: "space-between",
-            height: "80vh"
+            height: "80vh",
+            [theme.breakpoints.down('sm')]: {
+                height: "55vh"
+            }
         }
     })
     const scrollSkills = (event) => {
@@ -52,11 +55,8 @@ function Intro(props) {
                     </div>
                     <div className="intro_text_bottom">
                         <div className='tool'>
-                            {/* My favorite programming paradigms are: <br/>
-                            OO programming, Functional programming and  */}
-
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, temporibus dicta? Magni quisquam tempora quidem.
-                            Lorem ipsum dolor sit. Lorem, ipsum dolor.
+                            My favorite programming paradigms are:
+                            OO programming, Functional programming and Multithreaded programming.
                             </div>
                     </div>
                 </div>
