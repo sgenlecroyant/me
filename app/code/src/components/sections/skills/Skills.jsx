@@ -125,7 +125,7 @@ function Skills(props) {
             },
             [theme.breakpoints.down('sm')]: {
                 paddingTop: "0rem",
-                backgroundColor: "yellow",
+                // backgroundColor: "yellow",
                 marginTop: "1rem"
             },
 
@@ -173,8 +173,8 @@ function Skills(props) {
                                 <div className="skill_details_box">
                                     <div className="details">Kafka</div>
                                     <div className="details_explain">
-                                    Building data pipelines and event-driven systems
-                                </div>
+                                        Building data pipelines and event-driven systems
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -220,8 +220,8 @@ function Skills(props) {
                                         Material UI
                                     </div>
                                     <div className="details_explain">
-                                    Design UIs quickly.
-                                </div>
+                                        Design UIs quickly.
+                                    </div>
                                 </div>
                             </div>
 
@@ -230,13 +230,13 @@ function Skills(props) {
 
                                 <div className="skill_details_box">
                                     <div className="details">
-                                    Redux
+                                        Redux
                                     </div>
                                     <div className="details_explain">
-                                    Application State Management tool.
+                                        Application State Management tool.
+                                    </div>
                                 </div>
-                                </div>
-                                
+
                             </div>
                         </div>
                     </Paper>
@@ -249,33 +249,37 @@ function Skills(props) {
                                 <img className="tech_icon" src={java} alt="java" />
 
                                 <div className="skill_details_box">
-                                    
-                                <div className="details">
-                                    Java
+
+                                    <div className="details">
+                                        Java
+                                    </div>
+                                    <div className="details_explain">
+                                        Proven highly scalabale and reliable in big data technology
+                                    </div>
+
                                 </div>
-                                <div className="details_explain">
-                                    Proven highly scalabale and reliable in big data technology
-                                </div>
-                                    
-                                </div>
-                                
+
                             </div>
 
                             <div className="kafka_streams">
                                 <img className="tech_icon" src={kafkaStreams} alt="kafka streams" />
-                                
+
                                 <div className="skill_details_box">
-                                    
-                                <div className="details">
-                                    KafkaStreams
+
+                                    <div className="details">
+                                        KafkaStreams
+                                    </div>
+                                    <div className="details_explain">
+                                        <div>
+                                        Big data Processing technology for real-time data streams.
+                                        <span className='additional_details'>
+                                            It's relatively new to the field, got matured back in 2017. It's one of the top contenders alongside Apache Spark Streaming, NiFi, Hadoop and Apache Flink.
+                                        </span>
+                                        </div>
+                                    </div>
+
                                 </div>
-                                <div className="details_explain">
-                                    Processing, transforming and enriching data at a high scale,
-                                    relatively new to the field, got matured back in 2017. It's one of the top contenders alongside Apache Spark Streaming, NiFi, Hadoop and Apache Flink. 
-                                </div>
-                                    
-                                </div>
-                                
+
                             </div>
 
                         </div>
@@ -290,77 +294,100 @@ function Skills(props) {
                             Databases
                         </div>
                         <div className="database_skills">
-                            
-                        <div className="mysql">
-                        <img className="tech_icon" src={mysql} alt="mysql" />
+
+                            <div className="mysql">
+                                <img className="tech_icon" src={mysql} alt="mysql" />
                                 <div className="skill_details_box">
                                     <div className="details">MySQL </div>
-                                    <div className='details_explain' > relational db,...</div>
+                                    <div className='details_explain' > Relational data store technology.</div>
                                 </div>
                             </div>
 
                             <div className="postgres">
-                            <img className="tech_icon" src={postgresql} alt="postgres" />
+                                <img className="tech_icon" src={postgresql} alt="postgres" />
                                 <div className="skill_details_box">
                                     <div className="details">PostgreSQL </div>
-                                    <div className='details_explain' > relational db,...</div>
+                                    <div className='details_explain' > Relational data store technology.</div>
                                 </div>
                             </div>
 
                             <div className="elasticsearch">
-                            <img className="tech_icon" src={elasticsearch2} alt="elasticsearch" />
+                                <img className="tech_icon" src={elasticsearch2} alt="elasticsearch" />
                                 <div className="skill_details_box">
                                     <div className="details">Elasticsearch </div>
-                                    <div className='details_explain' > NoSQL db,...</div>
+                                    <div className='details_explain' >NoSQL data store for full text search and analytics engine.</div>
                                 </div>
                             </div>
 
 
                             <div className="jpa">
-                            <img className="tech_icon" src={jpa} alt="jpa" />
+                                <img className="tech_icon" src={jpa} alt="jpa" />
                                 <div className="skill_details_box">
                                     <div className="details">JPA </div>
-                                    <div className='details_explain' > JPA,...</div>
+                                    <div className='details_explain' > Java Persistence API.</div>
                                 </div>
                             </div>
 
                             <div className="hibernate">
-                            <img className="tech_icon" src={hibernate} alt="hibernate" />
+                                <img className="tech_icon" src={hibernate} alt="hibernate" />
                                 <div className="skill_details_box">
                                     <div className="details">Hibernate </div>
-                                    <div className='details_explain' > Hibernate,...</div>
+                                    <div className='details_explain' > JPA's the most popular implementation.</div>
                                 </div>
                             </div>
-
-
-
-
-
-                            
-                            
-                             
                         </div>
                     </Paper>
                     <Paper elevation={3} className="skills_type">
                         <div className="skill_type_title">
-                            CI/CD
+                            workflow automation
                         </div>
                         <div className="ci_cd_skills">
-                            <img className="tech_icon" src={jenkins} alt="mysql" />
+
+                            <div className="jenkins">
+                                <img className="tech_icon" src={jenkins} alt="jenkins" />
+                                <div className="skill_details_box">
+                                    <div className="details">Jenkins </div>
+                                    <div className='details_explain' >
+                                        <div>
+                                            Automation Server
+                                            for continious Integration, Continious Deployment.
+                                            <span className='additional_details'>
+                                                It fits well in the testing and deployment software development lifecycle and provides a well-standarized environemnt while developing, testigng and deploying the software.
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
                     </Paper>
                     <Paper elevation={3} className="skills_type">
                         <div className="skill_type_title">
                             VCS/SCM
                         </div>
                         <div className="vcs_skills">
-                            <img className="tech_icon" src={git} alt="mysql" />
-                            <img className="tech_icon" src={github} alt="mysql" />
+
+                            <div className="git">
+                                <img className="tech_icon" src={git} alt="git" />
+                                <div className="skill_details_box">
+                                    <div className="details">Git </div>
+                                    <div className='details_explain' > For software source code version control</div>
+                                </div>
+                            </div>
+
+                            <div className="github">
+                                <img className="tech_icon" src={github} alt="github" />
+                                <div className="skill_details_box">
+                                    <div className="details">GitHub </div>
+                                    <div className='details_explain' > For software source code hosting service.</div>
+                                </div>
+                            </div>
                         </div>
                     </Paper>
                 </div>
 
-                <div className="skills_third_row">
+                <div className="skills_first_row">
                     <Paper elevation={3} className="skills_type">
                         <div className="skill_type_title">
                             Build Tools

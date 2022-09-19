@@ -55,8 +55,8 @@ function Intro(props) {
                     </div>
                     <div className="intro_text_bottom">
                         <div className='tool'>
-                            My favorite programming paradigms are:
-                            OO programming, Functional programming and Multithreaded programming.
+                            My favorite programming paradigms are: <br />
+                            Object-Oriented programming, Functional programming and Multithreaded programming.
                             </div>
                     </div>
                 </div>
