@@ -284,17 +284,61 @@ function Skills(props) {
 
 
 
-                <div className="skills_second_row">
+                <div className="skills_first_row">
                     <Paper elevation={3} className="skills_type">
                         <div className="skill_type_title">
                             Databases
                         </div>
                         <div className="database_skills">
-                            <img className="tech_icon" src={mysql} alt="mysql" />
+                            
+                        <div className="mysql">
+                        <img className="tech_icon" src={mysql} alt="mysql" />
+                                <div className="skill_details_box">
+                                    <div className="details">MySQL </div>
+                                    <div className='details_explain' > relational db,...</div>
+                                </div>
+                            </div>
+
+                            <div className="postgres">
                             <img className="tech_icon" src={postgresql} alt="postgres" />
+                                <div className="skill_details_box">
+                                    <div className="details">PostgreSQL </div>
+                                    <div className='details_explain' > relational db,...</div>
+                                </div>
+                            </div>
+
+                            <div className="elasticsearch">
                             <img className="tech_icon" src={elasticsearch2} alt="elasticsearch" />
-                            <img className="tech_icon" src={hibernate} alt="hibernate" />
+                                <div className="skill_details_box">
+                                    <div className="details">Elasticsearch </div>
+                                    <div className='details_explain' > NoSQL db,...</div>
+                                </div>
+                            </div>
+
+
+                            <div className="jpa">
                             <img className="tech_icon" src={jpa} alt="jpa" />
+                                <div className="skill_details_box">
+                                    <div className="details">JPA </div>
+                                    <div className='details_explain' > JPA,...</div>
+                                </div>
+                            </div>
+
+                            <div className="hibernate">
+                            <img className="tech_icon" src={hibernate} alt="hibernate" />
+                                <div className="skill_details_box">
+                                    <div className="details">Hibernate </div>
+                                    <div className='details_explain' > Hibernate,...</div>
+                                </div>
+                            </div>
+
+
+
+
+
+                            
+                            
+                             
                         </div>
                     </Paper>
                     <Paper elevation={3} className="skills_type">

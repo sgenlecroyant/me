@@ -75,6 +75,13 @@
     margin-left: 20px;
     margin-top: 10px;
 }
+
+.mysql, .postgres, .elasticsearch, .jpa, .hibernate {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 3px;
+}
 .redux {
     margin-bottom: 5px;
 }
