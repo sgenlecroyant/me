@@ -70,7 +70,7 @@
     margin-left: 20px;
     margin-top: 30px;
 }
-.javascript, .typescript, .material_ui, .redux, .reactjs, .kafka_streams, .maven, .gradle {
+.javascript, .typescript, .material_ui, .redux, .reactjs, .kafka_streams, .maven, .gradle, .docker {
     display: flex;
     align-items: center;
     margin-left: 20px;

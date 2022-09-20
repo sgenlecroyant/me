@@ -414,9 +414,15 @@ function Skills(props) {
                         <div className="skill_type_title">
                             Containerization
                         </div>
-                        <div className="containerization_skills">
-                            <img className="tech_icon" src={docker} alt="docker" />
+
+                        <div className="docker">
+                        <img className="tech_icon" src={docker} alt="docker" />
+                                <div className="skill_details_box">
+                                    <div className="details">Docker </div>
+                                    <div className='details_explain' > Containerization</div>
+                                </div>
                         </div>
+
                     </Paper>
                     <Paper elevation={3} className="skills_type">
                         <div className="skill_type_title">
