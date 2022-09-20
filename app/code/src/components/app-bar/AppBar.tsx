@@ -5,12 +5,10 @@ import './AppBar.css'
 import AppMenu from '../menu/AppMenu'
 function AppBar() {
 
-    const [showMenu, setShowMenu] = useState<boolean>(false)
+    const [showMenu, setShowMenu] = useState(false)
     const [isDesktop, setIsDesktop] = useState(false)
 
     useEffect(() => {
-
-
         var myNav = document.getElementById('mynav');
         var skillsLink = document.getElementById('skills')
         var connectLink = document.getElementById('connect')
@@ -18,7 +16,9 @@ function AppBar() {
 
         var menuIcon = document.getElementById('menu_icon')
 
-        // var linksList = document.getElementById('links-list')
+
+
+        var linksList = document.getElementById('links-list')
 
         // const linksStyleWhite = {
         //     display: "flex",
@@ -79,54 +79,51 @@ function AppBar() {
         //     fontweight: 400
         // }
 
-        // console.log(myNav)
-        window.onscroll = function () {
-            "use strict";
-            if (document.body.scrollTop >= 5 || document.documentElement.scrollTop >= 5) {
+        // window.onscroll = function () {
+        //     "use strict";
+        //     if ((document.body.scrollTop >= 5 || document.documentElement.scrollTop >= 5)) {
+        //         console.log("changing color")
+        //         // Object.assign(skillsLink.style, skillsStyleValueWhite);
+        //         // Object.assign(connectLink.style, connectStyleValueWhite);
+        //         // Object.assign(focusLink.style, focusStyleValueWhite);
 
-                // Object.assign(skillsLink.style, skillsStyleValueWhite);
-                // Object.assign(connectLink.style, connectStyleValueWhite);
-                // Object.assign(focusLink.style, focusStyleValueWhite);
+        //         // Object.assign(linksList.style, linksStyleWhite)
+        //         myNav.classList.add("nav-colored");
+        //         myNav.classList.remove("nav-transparent");
+        //         skillsLink.classList.add('skills_colored')
+        //         connectLink.classList.add('connect_colored')
+        //         focusLink.classList.add('focus_colored')
+        //         menuIcon.classList.add('menu_colored')
 
-                // Object.assign(linksList.style, linksStyleWhite)
-                myNav.classList.add("nav-colored");
-                myNav.classList.remove("nav-transparent");
-
-                skillsLink.classList.add('skills_colored')
-                connectLink.classList.add('connect_colored')
-                focusLink.classList.add('focus_colored')
-                menuIcon.classList.add('menu_colored')
-
-                skillsLink.classList.remove('skills_colored_transparent')
-                connectLink.classList.remove('connect_colored_transparent')
-                focusLink.classList.remove('focus_colored_transparent')
-                menuIcon.classList.remove('menu_transparent')
-            }
-            else {
+        //         skillsLink.classList.remove('skills_colored_transparent')
+        //         connectLink.classList.remove('connect_colored_transparent')
+        //         focusLink.classList.remove('focus_colored_transparent')
+        //         menuIcon.classList.remove('menu_transparent')
+        //     }
+        //     else {
                 
-                // Object.assign(skillsLink.style, skillsStyleValueCrimson);
-                // Object.assign(connectLink.style, connectStyleValueCrimson);
-                // Object.assign(focusLink.style, focusStyleValueCrimson);
-                // Object.assign(linksList.style, linksStyleCrimson)
+        //         // Object.assign(skillsLink.style, skillsStyleValueCrimson);
+        //         // Object.assign(connectLink.style, connectStyleValueCrimson);
+        //         // Object.assign(focusLink.style, focusStyleValueCrimson);
+        //         // Object.assign(linksList.style, linksStyleCrimson)
 
-                myNav.classList.add("nav-transparent");
-                myNav.classList.remove("nav-colored");
+        //         myNav.classList.add("nav-transparent");
+        //         myNav.classList.remove("nav-colored");
 
-                skillsLink.classList.remove('skills_colored')
-                connectLink.classList.remove('connect_colored')
-                focusLink.classList.remove('focus_colored')
-                menuIcon.classList.remove('menu_colored')
+        //         skillsLink.classList.remove('skills_colored')
+        //         connectLink.classList.remove('connect_colored')
+        //         focusLink.classList.remove('focus_colored')
+        //         menuIcon.classList.remove('menu_colored')
 
-                skillsLink.classList.add('skills_colored_transparent')
-                connectLink.classList.add('connect_colored_transparent')
-                focusLink.classList.add('focus_colored_transparent')
-                menuIcon.classList.add('menu_transparent')
-            }
-        };
-
-
-
+        //         skillsLink.classList.add('skills_colored_transparent')
+        //         connectLink.classList.add('connect_colored_transparent')
+        //         focusLink.classList.add('focus_colored_transparent')
+        //         menuIcon.classList.add('menu_transparent')
+        //     }
+        // };
+       
     }, [])
+
 
     const NavBar = styled(Box)(({ theme }) => {
         return {
@@ -137,7 +134,8 @@ function AppBar() {
             padding: "0px 20px",
             width: "100vw",
             margin: "10px",
-            color: "crimson",
+            color: "white",
+            backgroundColor: "crimson",
             [theme.breakpoints.down('sm')]: {
                 // backgroundColor: "green",
                 padding: "0px 5px"
@@ -149,11 +147,20 @@ function AppBar() {
         setShowMenu(!showMenu)
     }
 
+    const navStyleOnShowMenu = {
+        backgroundColor: "crimson",
+        color: "white"
+    }
+
+    const navStyleOnHideMenu = {
+        backgroundColor: "white",
+        color: "crimson"
+    }
 
 
     return (
         <React.Fragment>
-            <NavBar className='navbar' id="mynav">
+            <NavBar className='navbar' id="mynav" >
                 <div className="logo">CodeDebug</div>
 
                 <div className="right_side">
