@@ -392,10 +392,23 @@ function Skills(props) {
                         <div className="skill_type_title">
                             Build Tools
                         </div>
-                        <div className="build_tools_skills">
-                            <img className="tech_icon" src={maven} alt="maven" />
-                            <img className="tech_icon" src={gradle2} alt="gradle" />
+
+                        <div className="maven">
+                        <img className="tech_icon" src={maven} alt="maven" />
+                                <div className="skill_details_box">
+                                    <div className="details">Maven </div>
+                                    <div className='details_explain' > Project build & dependence management tool</div>
+                                </div>
                         </div>
+
+                        <div className="gradle">
+                        <img className="tech_icon" src={gradle} alt="gradle" />
+                                <div className="skill_details_box">
+                                    <div className="details">Gradle </div>
+                                    <div className='details_explain' > Project build & dependence management tool</div>
+                                </div>
+                        </div>
+
                     </Paper>
                     <Paper elevation={3} className="skills_type">
                         <div className="skill_type_title">
