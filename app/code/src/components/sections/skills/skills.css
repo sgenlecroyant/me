@@ -75,6 +75,7 @@
     align-items: center;
     margin-left: 20px;
     margin-top: 10px;
+    padding-bottom: 10px;
 }
 
 .mysql, .postgres, .elasticsearch, .jpa, .hibernate, .jenkins, .git, .github {
@@ -82,6 +83,7 @@
     align-items: center;
     margin-left: 20px;
     margin-top: 3px;
+    padding-bottom: 10px;
 }
 .redux {
     margin-bottom: 5px;
@@ -113,7 +115,15 @@
     justify-content: center;
     padding: 3px;
 }
-
+.about_me {
+    text-align: center;
+    padding: 0px 2.5rem;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #3a3e59;
+    opacity: 0.8;
+    padding-bottom: 10px;
+}
 @media screen and (max-width: 480px) {
 
     #skills_icon {
@@ -134,6 +144,7 @@
     .skills_first_row {
         display: flex;
         flex-direction: column;
+        padding: 1rem 10px;
     }
 
     .additional_details {

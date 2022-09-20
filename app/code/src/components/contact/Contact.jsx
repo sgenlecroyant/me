@@ -2,6 +2,7 @@ import { Box, Button, styled, TextField, Typography } from '@mui/material'
 import React, { useRef } from 'react'
 import "./contact.css"
 import emailjs from '@emailjs/browser';
+import { Chat } from '@mui/icons-material';
 
 function Contact() {
 
@@ -28,7 +29,13 @@ function Contact() {
     };
     return (
         <React.Fragment>
-            <div>Ccntact</div>
+            <div className='contact_form_container'>
+                <TextField  />
+
+                <div >
+                <Chat className='chat_icon'/>
+                </div>
+            </div>
         </React.Fragment>
     )
 }

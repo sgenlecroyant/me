@@ -1,6 +1,6 @@
 import { Javascript, ThirtyFpsSelectRounded } from "@mui/icons-material";
 import { Box, Drawer, styled } from "@mui/material";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AppBar from "./components/app-bar/AppBar";
 import Contact from "./components/contact/Contact";
 import Focus from "./components/focus/Focus";
@@ -15,6 +15,8 @@ import Home from "./pages/home-page/Home";
 
 function App() {
 
+  const [isLoading, setLoading] = useState(true)
+
   useEffect(() => {
 
   }, [])
@@ -28,19 +30,24 @@ function App() {
     }
   })
 
+  const loadSpinner = (App) => {
+    return isLoading ? (<div className="spinner_container">
+      <div className="loading_spinner"></div>
+    </div>) : App;
+  }
+
+
   return (
     <div className="App">
       <AppBar />
-          <Intro />
-          <Sections>
-            <Skills />
-            <Focus/>
-            <Contact />
-            <Social />
-          </Sections>
-      </div>
-
-
+      <Intro />
+      <Sections>
+        <Skills />
+        <Focus />
+        <Contact />
+        <Social />
+      </Sections>
+    </div>
   );
 }
 

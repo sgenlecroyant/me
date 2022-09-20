@@ -62,7 +62,8 @@
     font-size: 16px;
     letter-spacing: 1px;
     padding-bottom: 13px;
-    font-family: 'Raleway', sans-serif;
+    /* font-family: 'Raleway', sans-serif; */
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
     
 }
@@ -71,12 +72,14 @@
     font-family: 'Raleway', sans-serif;
 }
 .greetings_title{
-    font-size: 25px;
+    font-size: 20px;
     padding-top: 15px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .greetings_tool {
-    font-size: 25px;
+    font-size: 30px;
     padding-top: 15px;
     font-family: 'Raleway', "sa ns-serif";
     text-align: center;
@@ -97,19 +100,18 @@
 }
 
 .tool {
-    /* margin-top: 30px; */
-    /* transform: rotate(340deg); */
+    
     padding-top: 10px;
     color: crimson;
-    font-family: 'Raleway', "sa ns-serif";
     text-align: center;
     letter-spacing: 1.5px;
+
+    font-family: 'Raleway', "sa ns-serif" !important;
+
     
 }
 
-.profession {
-    color: black;
-}
+
 
 @media screen and (max-width: 480px) {
 
@@ -153,6 +155,7 @@
         text-align: center;
         letter-spacing: 1.5px;
         font-size: 10px;
+        font-family: 'Raleway', "sa ns-serif" !important;
     }
 
     .profile {

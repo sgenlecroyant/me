@@ -30,7 +30,8 @@ function Intro(props) {
 
     useEffect(() => {
         const languageAnimate = document.querySelector('#languageAnimate')
-        init(languageAnimate, { showCursor: false, strings: ['Java', 'JavaScript', 'TypeScript'] })
+        init(languageAnimate, { showCursor: false, strings: ['Java', 'JavaScript', 'TypeScript'],backDelay: 1500,
+        backSpeed:150,typeSpeed:  150 })
 
         // const paradigm_animate = document.querySelector('#paradigm_animate')
         // init(paradigm_animate, { showCursor: false, strings: ['Object-Oriented programming', 'Functional programming', 'Multithreaded-programming'] })
@@ -42,7 +43,7 @@ function Intro(props) {
         <React.Fragment >
             <IntroContainer className="intro_container">
                 <div className="intro_right_side">
-                    <img className='profile' src={me} alt="profile" />
+                    {/* <img className='profile' src={me} alt="profile" /> */}
 
                 </div>
                 <div className="intro_left_side">
@@ -51,13 +52,13 @@ function Intro(props) {
                         </div>
                         <div id='first_name'> Franck Nsabimana, </div> 
                         <div className='greetings_title'>I am a passionate Software Developer </div>
-                            <div className='greetings_tool'>I use <span className='language' id="languageAnimate">Java</span> </div> 
+                            <div className='greetings_tool'>I use <span className='language' id="languageAnimate"></span> </div> 
                     </div>
                     <div className="intro_text_bottom">
                         <div className='tool'>
                             My favorite programming paradigms are: <br />
                             Object-Oriented programming, Functional programming and Multithreaded programming.
-                            </div>
+                        </div>
                     </div>
                 </div>
             </IntroContainer>

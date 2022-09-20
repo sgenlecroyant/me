@@ -9,25 +9,31 @@
   <meta name="website description" content="my porfolio to mark my online presence" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,300;1,400&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Freehand&family=Raleway:wght@200;300;400&family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,300;1,400&display=swap" rel="stylesheet">
+
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Freehand&family=Raleway&display=swap');
+
     .fav-icon {
-      border: 3px solid red;
+      border: 3px solid #000 !important;
       border-radius: 50px;
     }
+
+    .nav-colored, .skills_colored, .connect_colored, .focus_colored, .menu_colored {
+      background-color: crimson;
+      color: white !important;
+     
+    }
+
+    .nav-transparent, .skills_colored_transparent, .connect_colored_transparent, .focus_colored_transparent, .menu_transparent {
+      background-color: white !important;
+      color: crimson !important;
+      
+    }
   </style>
-  
-  <link rel="icon"  class="fav-icon" type="image/jpg" href="./selfie 2.jpg" />
+
+  <link rel="icon" class="fav-icon" type="image/jpg" href="./selfie 2.jpg" />
 
   <title>Code Debug</title>
   <style>
@@ -42,20 +48,35 @@
       border: 0px solid inherit;
       border-radius: 50px;
     }
+
     * {
       scroll-behavior: smooth;
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Raleway', sans-serif;
-      
+
     }
 
-    
 
-     body {
+    @keyframes customSpinner {
 
-       
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .loading_spinner {
+      width: 50px;
+      height: 50px;
+      border: 10px solid green;
+      border-top: 10px solid grey;
+      border-radius: 50%;
+      animation: customSpinner 1.5s linear infinite;
     }
 
 
@@ -89,8 +110,8 @@
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div> 
-  
+  <div id="root"></div>
+
 </body>
 
 </html>

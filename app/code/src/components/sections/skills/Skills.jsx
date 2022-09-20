@@ -126,7 +126,7 @@ function Skills(props) {
             [theme.breakpoints.down('sm')]: {
                 paddingTop: "0rem",
                 // backgroundColor: "yellow",
-                marginTop: "1rem"
+                marginTop: "0rem"
             },
 
             // [theme.breakpoints.up('lg')]: {
@@ -426,7 +426,12 @@ function Skills(props) {
                     </Paper>
                     <Paper elevation={3} className="skills_type">
                         <div className="skill_type_title">
-                            other story, ...
+                            A little bit about me!
+                        </div>
+                        <div className='about_me'>
+                            I am passionate about computer programming,
+                            I learn very quickly and I love talking about tech.
+                            In fact, I love sharing what I know with others and ask if there is anything that I don't know.
                         </div>
 
                     </Paper>

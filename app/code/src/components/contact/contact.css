@@ -1,8 +1,22 @@
+.contact_form_container {
+    background-color: green;
+    float: inline-end;
+}
 
-@media screen and (max-width: 60px){
+.chat_icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 120px !important;
+    height: 120px !important;
+    color: crimson;
+}
+
+@media screen and (max-width: 480px) {
     
-    .submit-btn {
-        /* color: red;
-        right: 50%; */
+    .chat_icon {
+        width: 60px !important;
+        height: 60px !important;
+        color: crimson !important;
     }
 }
