@@ -4,7 +4,7 @@ import "./contact.css"
 import emailjs from '@emailjs/browser';
 import { Chat } from '@mui/icons-material';
 
-function Contact() {
+function ContactChatIcon() {
 
     
     const form = useRef();
@@ -40,4 +40,4 @@ function Contact() {
     )
 }
 
-export default Contact
+export default ContactChatIcon

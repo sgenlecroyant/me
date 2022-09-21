@@ -2,7 +2,8 @@ import { Javascript, ThirtyFpsSelectRounded } from "@mui/icons-material";
 import { Box, Drawer, styled } from "@mui/material";
 import { useEffect, useState } from "react";
 import AppBar from "./components/app-bar/AppBar";
-import Contact from "./components/contact/Contact";
+import ContactChatIcon from "./components/contact/ContactChatIcon";
+import MyBottomNavigationAction from "./components/contact/MyBottomNavigationAction";
 import Focus from "./components/focus/Focus";
 import Intro from "./components/intro/Intro";
 import AppMenu from "./components/menu/AppMenu";
@@ -38,15 +39,18 @@ function App() {
 
 
   return (
+    <div className="App_Wrapper">
+
     <div className="App">
       <AppBar />
       <Intro />
       <Sections>
         <Skills />
         <Focus />
-        <Contact />
+        <ContactChatIcon />
         <Social />
       </Sections>
+    </div>
     </div>
   );
 }
