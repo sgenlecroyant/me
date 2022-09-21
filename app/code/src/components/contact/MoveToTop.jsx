@@ -1,14 +1,19 @@
 import { Box, Button, styled, TextField, Typography } from '@mui/material'
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import "./contact.css"
 import emailjs from '@emailjs/browser';
-import { Chat } from '@mui/icons-material';
+import { ArrowUpward, Chat } from '@mui/icons-material';
 
-function ContactChatIcon() {
+function MoveToTop() {
 
     
     const form = useRef();
 
+
+    useEffect(() => {
+
+        console.log("loaded MoveToTop")
+    }, [])
     // user_name: is used for name
     // user_email: is used for email origin address
 
@@ -30,14 +35,12 @@ function ContactChatIcon() {
     return (
         <React.Fragment>
             <div className='contact_form_container'>
-                <TextField  />
-
                 <div >
-                <Chat className='chat_icon'/>
+                <ArrowUpward className='move_to_top_icon'/>
                 </div>
             </div>
         </React.Fragment>
     )
 }
 
-export default ContactChatIcon
+export default MoveToTop

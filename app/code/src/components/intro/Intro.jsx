@@ -55,10 +55,10 @@ function Intro(props) {
                             <div className='greetings_tool'>I use <span className='language' id="languageAnimate"></span> </div> 
                     </div>
                     <div className="intro_text_bottom">
-                        <div className='tool'>
+                        {/* <div className='tool'>
                             My favorite programming paradigms are: <br />
                             Object-Oriented programming, Functional programming and Multithreaded programming.
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </IntroContainer>

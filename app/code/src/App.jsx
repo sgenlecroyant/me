@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import AppBar from "./components/app-bar/AppBar";
 import AboutMe from "./components/contact/AboutMe";
 import Contact from "./components/contact/Contact";
-import ContactChatIcon from "./components/contact/ContactChatIcon";
+import MoveToTop from "./components/contact/MoveToTop";
+import ContactChatIcon from "./components/contact/MoveToTop";
 import MyBottomNavigationAction from "./components/contact/MyBottomNavigationAction";
 import Focus from "./components/focus/Focus";
 import Intro from "./components/intro/Intro";
@@ -21,7 +22,7 @@ function App(props) {
   const [isLoading, setLoading] = useState(true)
 
   useEffect(() => {
-
+    console.log("loaded AppBar: >>>")
   }, [])
 
 
@@ -44,17 +45,15 @@ function App(props) {
     <div className="App_Wrapper">
 
     <div className="App">
-      <AppBar />
-
       <Intro />
       <Sections>
         <Skills />
         <Focus />
-        <Contact/>
+        {/* <Contact/> */}
         <ContactChatIcon />
         <Social />
       </Sections>
-      
+      <MoveToTop/>
     </div>
     </div>
   );

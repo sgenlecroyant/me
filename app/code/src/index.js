@@ -11,15 +11,18 @@ import {
   Route,
 } from "react-router-dom";
 import Contact from './components/contact/Contact';
+import AppBar from './components/app-bar/AppBar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
   <div>
+  <AppBar />
     <BrowserRouter>
         <Routes>
+          {/* <Route  path="/" element={<AppBar />} /> */}
           <Route index path='/' element={<App />} />
-          <Route index path='/contact' element={<Contact />} />
+          <Route path='/contact' element={<Contact />} />
         </Routes>
         <MyBottomNavigationAction />
     </BrowserRouter>
