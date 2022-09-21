@@ -37,7 +37,7 @@ function AboutMe() {
                 are Design Patterns, Software Development Principles and multi-threading
             </div> */}
 
-            <Modal style={style}
+            {/* <Modal style={style}
                 open={open}
                 onClose={handleClose}
                 aria-labelledby="modal-modal-title"
@@ -53,7 +53,7 @@ function AboutMe() {
                     </Typography>
                 </Box>
             </Modal>
-
+ */}
 
         </div>
     )

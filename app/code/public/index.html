@@ -20,16 +20,24 @@
       border-radius: 50px;
     }
 
-    .nav-colored, .skills_colored, .connect_colored, .focus_colored, .menu_colored {
+    .nav-colored,
+    .skills_colored,
+    .connect_colored,
+    .focus_colored,
+    .menu_colored {
       background-color: crimson;
       color: white !important;
-     
+
     }
 
-    .nav-transparent, .skills_colored_transparent, .connect_colored_transparent, .focus_colored_transparent, .menu_transparent {
+    .nav-transparent,
+    .skills_colored_transparent,
+    .connect_colored_transparent,
+    .focus_colored_transparent,
+    .menu_transparent {
       background-color: white !important;
       color: crimson !important;
-      
+
     }
   </style>
 
@@ -105,13 +113,143 @@
     section {
       scroll-snap-align: start;
     }
+
+    /* ============================================================= */
+    .open_modal {
+      border: 1.5px solid white;
+      border-radius: 5px;
+      font-size: large;
+      font-weight: 800;
+      color: #fff;
+      position: absolute;
+      bottom: 40px;
+      left: 30px;
+      padding: 10px 10px;
+      box-shadow: 0 0 3px black;
+      transition: 0.5s;
+      background-color: black;
+      color: white;
+      position: fixed;
+    }
+
+    .open_modal:hover {
+      background-color: white;
+      color: black;
+      transition: 1s;
+      cursor: pointer;
+    }
+
+    .modal {
+      background-color: white;
+      width: 50%;
+      height: 40%;
+      border: 1px solid;
+      border-radius: 5px;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      font-size: 1.2rem;
+      padding: 10px 20px;
+
+      transform: translate(-50%, -50%);
+      display: none;
+      animation-name: modalAnimation;
+      animation-duration: 2s;
+      opacity: 0.8;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    /* 
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 10%;
+    z-index: 1
+} */
+
+    .modal_container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+
+    .close_modal {
+      font-size: 2rem;
+      position: fixed;
+      top: -2px;
+      right: 4px;
+    }
+
+    .close_modal:hover {
+      cursor: pointer;
+      color: red;
+    }
+
+    .hide_about {
+      display: none;
+    }
+
+    .show_about {
+      display: block;
+    }
+
+    @keyframes modalAnimation {
+
+      from {
+        top: -300px;
+        left: -400px;
+        opacity: 0;
+      }
+
+      to {
+        top: 50%;
+        opacity: 1;
+      }
+
+
+    }
+
+    @media screen and (max-width: 480px) {
+
+    .open_modal{
+        display: none
+      }
+    }
   </style>
 </head>
 
 <body>
+  <div id="open" class="open_modal">
+    <p id="learn_more">learn about me</p>
+  </div>
+
+  <div id="modal_wrapper" class="modal">
+    <div class="modal_container">
+      <div class="modal_content">
+        I am passionate about computer programming,
+        I learn very quickly and I love talking about tech.
+        In fact, I love sharing what I know with others and ask if there is anything that I don't know.
+        I primarily code in Java and some of my favorite software development topics
+        are Design Patterns, Software Development Principles and multi-threading.
+      </div>
+      <div id="close" class="close_modal">&times;</div>
+    </div>
+  </div>
+
+
+
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
 
+
+  <script src="./vanillaJS/popup.js">
+
+  </script>
 </body>
 
 </html>
