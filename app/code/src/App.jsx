@@ -2,6 +2,8 @@ import { Javascript, ThirtyFpsSelectRounded } from "@mui/icons-material";
 import { Box, Drawer, styled } from "@mui/material";
 import { useEffect, useState } from "react";
 import AppBar from "./components/app-bar/AppBar";
+import AboutMe from "./components/contact/AboutMe";
+import Contact from "./components/contact/Contact";
 import ContactChatIcon from "./components/contact/ContactChatIcon";
 import MyBottomNavigationAction from "./components/contact/MyBottomNavigationAction";
 import Focus from "./components/focus/Focus";
@@ -14,7 +16,7 @@ import Social from "./components/social/Social";
 import TestTypescript from "./components/TestTypescript";
 import Home from "./pages/home-page/Home";
 
-function App() {
+function App(props) {
 
   const [isLoading, setLoading] = useState(true)
 
@@ -43,13 +45,16 @@ function App() {
 
     <div className="App">
       <AppBar />
+
       <Intro />
       <Sections>
         <Skills />
         <Focus />
+        <Contact/>
         <ContactChatIcon />
         <Social />
       </Sections>
+      <MyBottomNavigationAction />
     </div>
     </div>
   );

@@ -43,7 +43,7 @@ function Intro(props) {
         <React.Fragment >
             <IntroContainer className="intro_container">
                 <div className="intro_right_side">
-                    {/* <img className='profile' src={me} alt="profile" /> */}
+                    <img className='profile' src={me} alt="profile" />
 
                 </div>
                 <div className="intro_left_side">

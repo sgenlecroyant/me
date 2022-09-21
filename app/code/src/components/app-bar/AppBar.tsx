@@ -3,6 +3,7 @@ import { Box, styled } from '@mui/material'
 import { Menu, Close, Clear } from '@mui/icons-material'
 import './AppBar.css'
 import AppMenu from '../menu/AppMenu'
+import AboutMe from '../contact/AboutMe'
 function AppBar() {
 
     const [showMenu, setShowMenu] = useState(false)
@@ -160,6 +161,7 @@ function AppBar() {
 
     return (
         <React.Fragment>
+            <div id="top" className='relative_to_contact_chat'>
             <NavBar className='navbar' id="mynav" >
                 <div className="logo">CodeDebug</div>
 
@@ -175,6 +177,8 @@ function AppBar() {
                 </div>
             </NavBar>
             <AppMenu showMenu={showMenu} handleMenuOptionClick={handleClick} />
+            {/* <AboutMe/> */}
+            </div>
         </React.Fragment>
     )
 }

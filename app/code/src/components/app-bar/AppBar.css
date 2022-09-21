@@ -1,6 +1,10 @@
 :root {
     --defaultFontSize: 1.2rem;
 }
+
+.relative_to_contact_chat {
+    position: relative;
+}
 .navbar {
     width: 100% !important;
     height: 50px !important;
@@ -8,6 +12,7 @@
     top: 0px !important ;
     /* background-color: green !important; */
     margin: 0px !important;
+    box-shadow: 0 0 30px;
 }
 .logo {
 

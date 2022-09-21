@@ -1,3 +1,11 @@
+
+
+.intro_container {
+    margin-top: 6rem;
+}
+
+
+
 .intro_right_side {
     flex: 7;
     display: flex;
