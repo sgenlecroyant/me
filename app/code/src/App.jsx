@@ -16,7 +16,8 @@ import Skills3D from "./components/sections/skills/Skills3D";
 import Social from "./components/social/Social";
 import TestTypescript from "./components/TestTypescript";
 import Home from "./pages/home-page/Home";
-
+import useScrollSnap from 'react-use-scroll-snap';
+import {useRef} from 'react'
 function App(props) {
 
   const [isLoading, setLoading] = useState(true)
@@ -24,6 +25,9 @@ function App(props) {
   useEffect(() => {
     console.log("loaded AppBar: >>>")
   }, [])
+
+  const scrollRef = useRef(null);
+    useScrollSnap({ ref: scrollRef, duration: 10, delay: 0 });
 
 
   const MyDrawer = styled(Drawer)(({ theme }) => {
@@ -44,7 +48,7 @@ function App(props) {
   return (
     <div className="App_Wrapper">
 
-    <div className="App">
+    <div className="App" ref={scrollRef}>
       <Intro />
       <Sections>
         <Skills />
