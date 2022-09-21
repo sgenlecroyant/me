@@ -54,7 +54,7 @@ function App(props) {
         <ContactChatIcon />
         <Social />
       </Sections>
-      <MyBottomNavigationAction />
+      
     </div>
     </div>
   );

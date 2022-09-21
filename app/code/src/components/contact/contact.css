@@ -21,12 +21,17 @@
 }
 
 .main_background {
-    background-color: gray;
+
     width: 100%;
     height: 100vh;
     padding-top: -10px;
     position: fixed;
     top: 0px;
+
+    background-image: url('data:image/jpeg;base64,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');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .name_input {
@@ -35,11 +40,37 @@
 
 .email_input {
     padding-left: 3px !important;
+    
+}
+
+.message_input {
+    color: green !important;
+}
+
+.submit {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.back_arrow {
+    width: 30px;
+    height: 30px;
+    color: crimson;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.submit_button {
+    
+    text-align: center;
+    background-color: crimson !important;
 }
 
 .contact_wrapper {
     width: 500px;
-    height: 400px;
+    height: 300px;
     background-color: white;
     margin: 30px auto;
     border-radius: 15px;
@@ -61,6 +92,32 @@
         width: 40px !important;
         height: 40px !important;
         color: crimson !important;
+    }
+
+    .contact_wrapper {
+        background-color: white !important;
+        width: 90%;
+        height: 370px;
+    }
+
+    .name_email, .message {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+    
+    }
+
+    .name_input, .email_input{
+        padding-top: 10px !important;
+    }
+
+    .name_input {
+        padding-right: 0px !important;
+    }
+
+    .email_input {
+        padding-left: 0px !important;
     }
 
     .bottom_navigation {

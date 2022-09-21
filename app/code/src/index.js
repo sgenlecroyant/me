@@ -21,7 +21,7 @@ root.render(
           <Route index path='/' element={<App />} />
           <Route index path='/contact' element={<Contact />} />
         </Routes>
-       
+        <MyBottomNavigationAction />
     </BrowserRouter>
     
   </div>
