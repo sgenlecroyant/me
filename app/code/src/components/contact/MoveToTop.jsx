@@ -10,6 +10,12 @@ function MoveToTop() {
     const form = useRef();
 
 
+    const handleScrollTop = (e) => {
+        var topElement = document.getElementById('top');
+        topElement.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
+    }
+
+
     useEffect(() => {
 
         console.log("loaded MoveToTop")
@@ -35,7 +41,7 @@ function MoveToTop() {
     return (
         <React.Fragment>
             <div className='contact_form_container'>
-                <div >
+                <div onClick={handleScrollTop}>
                 <ArrowUpward className='move_to_top_icon'/>
                 </div>
             </div>

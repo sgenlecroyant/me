@@ -15,8 +15,14 @@ function ReusableContactComponent() {
     }
 
     const submitMessage = (e) => {
-        const concantenatedMessage = "Name: "+name+ ", Email: " +email+ ", Message: " +message
-        alert(concantenatedMessage)
+        const concantenatedMessage = "Name: "+name+ ", Email: " +email+ ", Message: " +message;
+
+        const isSure = window.confirm('are you sure you wanna send this email?')
+        if(isSure){
+            alert(concantenatedMessage)
+        }else{
+            alert("Aborted")
+        }
     }
     return (
         <div className="wrapper">
