@@ -7,10 +7,12 @@ import { Email, Handshake, AirlineSeatReclineNormal, School, ContactEmergency, }
 import './AppMenu.css'
 
 
+//{ handleMenuOptionClick: Function; showMenu: boolean }
+function AppMenu(props) {
 
-function AppMenu(props: { handleMenuOptionClick: Function; showMenu: boolean }) {
-
+    
     const wrapperRef = useRef(null);
+
     // useOutsideAlerter(wrapperRef);
     const MenuOptions = styled(Box)(({ theme }) => {
         return {
@@ -22,7 +24,7 @@ function AppMenu(props: { handleMenuOptionClick: Function; showMenu: boolean }) 
         }
     })
 
-    const handleScroll = (event: any): void => {
+    const handleScroll = (event) => {
         const destinationElement = document.getElementById(event.target.className)
         console.log("className: ", event.target.className)
         if (event.target.className === '3D-skills') {
@@ -41,20 +43,25 @@ function AppMenu(props: { handleMenuOptionClick: Function; showMenu: boolean }) 
 
     }
 
+
+    const handleClick = () => {
+        console.log("event: ")
+    }
+
     return (
         <React.Fragment >
             {props.showMenu && <div className='skills-box' ref={wrapperRef}>
                 <div  className='logo_menu'>CodeDebug</div>
                 <List>
-                    <ListItem className='list_item_home'>
-                        <IconButton className="item_button">
-                            <ListItemButton>
-                            <School className='item_icon' fontSize='small'/>
+                    <ListItem  title="skills" className='list_item_home' >
+                        <IconButton onClick={handleClick} className="item_button" >
+                            <ListItemButton >
+                            <School  className='item_icon' fontSize='small'/>
                             </ListItemButton>
                         </IconButton>
                         <ListItemText disableTypography primary="skills" className='item_text' />
                     </ListItem>
-                    <ListItem className='list_item_services'>
+                    <ListItem title="focus" className='list_item_services'>
                         <IconButton className="item_button">
                             <ListItemButton>
                                 <AirlineSeatReclineNormal className='item_icon' fontSize='small'/>
@@ -62,7 +69,7 @@ function AppMenu(props: { handleMenuOptionClick: Function; showMenu: boolean }) 
                         </IconButton>
                         <ListItemText disableTypography primary="focus" className='item_text'></ListItemText>
                     </ListItem>
-                    <ListItem className='list_item_features'>
+                    <ListItem title="contact" className='list_item_features' >
                         <IconButton className="item_button">
                             <ListItemButton>
                                 <Email fontSize='small' className='item_icon'/>
@@ -70,7 +77,7 @@ function AppMenu(props: { handleMenuOptionClick: Function; showMenu: boolean }) 
                         </IconButton>
                         <ListItemText disableTypography primary="contact" className='item_text'></ListItemText>
                     </ListItem>
-                    <ListItem className='list_item_connect'>
+                    <ListItem title="connect" className='list_item_connect' >
                         <IconButton className="item_button">
                             <ListItemButton>
                                 <Handshake fontSize='small' className='item_icon'/>

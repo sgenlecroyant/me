@@ -49,16 +49,16 @@ function App(props) {
     <div className="App_Wrapper">
 
     <div className="App" ref={scrollRef}>
+    
       <Intro />
       <Sections>
         <Skills />
-        {/* <Contact/> */}
         <ContactChatIcon />
-        <Social />
       </Sections>
       <MoveToTop/>
-      <Focus/>
+      
     </div>
+    
     </div>
   );
 }

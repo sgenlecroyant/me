@@ -15,13 +15,6 @@ closeModal.addEventListener('click', (event) => {
     console.log("close modal")
 })
 
-window.addEventListener('click', (event) => {
-    console.log("target", event.target.querySelector(".body"))
-    if(event.target ===  modalContainer){
-        modalContainer.style.display = "none"
-    }
-    // console.log("window clicked")
-})
 
 window.onscroll = function () {
             "use strict";

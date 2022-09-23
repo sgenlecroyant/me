@@ -4,6 +4,7 @@
 
 .relative_to_contact_chat {
     position: relative;
+    z-index: 1000;
 }
 .navbar {
     width: 100% !important;

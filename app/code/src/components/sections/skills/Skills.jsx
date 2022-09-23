@@ -28,6 +28,9 @@ import git from '../../../assets/images/git.svg'
 import github from '../../../assets/images/github.svg'
 import typescript from '../../../assets/images/typescript.svg'
 import jpa from '../../../assets/images/jpa 2.png'
+import Social from '../../social/Social'
+import Contact from '../../contact/Contact'
+import Hello from '../../../Hello'
 
 
 function Skills(props) {
@@ -114,6 +117,7 @@ function Skills(props) {
 
     const SkillsContainer = styled(Box)(({ theme }) => {
         return {
+            position: "relative",
             width: "100vw",
             height: "100vh",
             backgroundColor: "",
@@ -271,10 +275,10 @@ function Skills(props) {
                                     </div>
                                     <div className="details_explain">
                                         <div>
-                                        Big data Processing technology for real-time data streams.
-                                        <span className='additional_details'>
-                                            It's relatively new to the field, got matured back in 2017. It's one of the top contenders alongside Apache Spark Streaming, NiFi, Hadoop and Apache Flink.
-                                        </span>
+                                            Big data Processing technology for real-time data streams.
+                                            <span className='additional_details'>
+                                                It's relatively new to the field, got matured back in 2017. It's one of the top contenders alongside Apache Spark Streaming, NiFi, Hadoop and Apache Flink.
+                                            </span>
                                         </div>
                                     </div>
 
@@ -394,19 +398,19 @@ function Skills(props) {
                         </div>
 
                         <div className="maven">
-                        <img className="tech_icon" src={maven} alt="maven" />
-                                <div className="skill_details_box">
-                                    <div className="details">Maven </div>
-                                    <div className='details_explain' > Project build & dependence management tool</div>
-                                </div>
+                            <img className="tech_icon" src={maven} alt="maven" />
+                            <div className="skill_details_box">
+                                <div className="details">Maven </div>
+                                <div className='details_explain' > Project build & dependence management tool</div>
+                            </div>
                         </div>
 
                         <div className="gradle">
-                        <img className="tech_icon" src={gradle} alt="gradle" />
-                                <div className="skill_details_box">
-                                    <div className="details">Gradle </div>
-                                    <div className='details_explain' > Project build & dependence management tool</div>
-                                </div>
+                            <img className="tech_icon" src={gradle} alt="gradle" />
+                            <div className="skill_details_box">
+                                <div className="details">Gradle </div>
+                                <div className='details_explain' > Project build & dependence management tool</div>
+                            </div>
                         </div>
 
                     </Paper>
@@ -416,11 +420,11 @@ function Skills(props) {
                         </div>
 
                         <div className="docker">
-                        <img className="tech_icon" src={docker} alt="docker" />
-                                <div className="skill_details_box">
-                                    <div className="details">Docker </div>
-                                    <div className='details_explain' > Containerization</div>
-                                </div>
+                            <img className="tech_icon" src={docker} alt="docker" />
+                            <div className="skill_details_box">
+                                <div className="details">Docker </div>
+                                <div className='details_explain' > Containerization</div>
+                            </div>
                         </div>
 
                     </Paper>
@@ -434,9 +438,11 @@ function Skills(props) {
                             In fact, I love sharing what I know with others and ask if there is anything that I don't know.
                         </div>
 
+
                     </Paper>
                 </div>
 
+                <Social />
             </SkillsContainer>
         </React.Fragment>
     )
