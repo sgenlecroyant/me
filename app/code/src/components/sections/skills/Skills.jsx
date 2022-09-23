@@ -183,7 +183,7 @@ function Skills(props) {
                             </div>
                         </div>
                     </Paper>
-                    <Paper elevation={3} className="skills_type">
+                    <Paper id="frontend" elevation={3} className="skills_type">
                         <div className="skill_type_title">
                             Frontend
                         </div>

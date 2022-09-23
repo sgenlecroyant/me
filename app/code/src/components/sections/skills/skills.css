@@ -18,13 +18,17 @@
     color: crimson;
 }
 
-.skills_first_row {
+.skills_first_row, .skills_second_row, .skills_third_row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(100px, auto);
     grid-gap: 10px 30px;
     padding: 1.3rem 10px;
 
+}
+
+#frontend {
+    /* grid-column: 2/4; */
 }
 
 .skills_type {
