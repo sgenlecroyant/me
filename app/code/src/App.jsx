@@ -52,12 +52,12 @@ function App(props) {
       <Intro />
       <Sections>
         <Skills />
-        <Focus />
         {/* <Contact/> */}
         <ContactChatIcon />
         <Social />
       </Sections>
       <MoveToTop/>
+      <Focus/>
     </div>
     </div>
   );

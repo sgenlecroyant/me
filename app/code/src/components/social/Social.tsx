@@ -7,7 +7,7 @@ function Social() {
     
   return (
     <React.Fragment>
-        <div>socials section</div>
+        <div className='social_wrapper'>socials section</div>
     </React.Fragment>  )
 }
 

@@ -115,9 +115,9 @@ function Skills(props) {
     const SkillsContainer = styled(Box)(({ theme }) => {
         return {
             width: "100vw",
-            height: "190vh",
+            height: "100vh",
             backgroundColor: "",
-            paddingTop: "8rem",
+            marginTop: "8rem",
             [theme.breakpoints.down('sm')]: {
                 paddingTop: "0px",
                 backgroundColor: "green",
@@ -267,7 +267,7 @@ function Skills(props) {
                                 <div className="skill_details_box">
 
                                     <div className="details">
-                                        KafkaStreams
+                                        Kafka Streams
                                     </div>
                                     <div className="details_explain">
                                         <div>

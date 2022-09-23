@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 import Contact from './components/contact/Contact';
 import AppBar from './components/app-bar/AppBar';
+import Focus from './components/focus/Focus';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,6 +24,7 @@ root.render(
           {/* <Route  path="/" element={<AppBar />} /> */}
           <Route index path='/' element={<App />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/focus' element={<Focus />} />
         </Routes>
         <MyBottomNavigationAction />
     </BrowserRouter>

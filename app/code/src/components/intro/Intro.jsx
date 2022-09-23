@@ -13,6 +13,7 @@ function Intro(props) {
         return {
             display: "flex",
             justifyContent: "space-between",
+            backgroundColor: "",
             height: "80vh",
             [theme.breakpoints.down('sm')]: {
                 height: "55vh"
