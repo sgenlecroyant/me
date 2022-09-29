@@ -40,3 +40,5 @@ yarn-debug.log*
 
 /app/code/yarn-error.log*
 yarn-error.log*
+
+/fixes.txt

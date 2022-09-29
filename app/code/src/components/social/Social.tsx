@@ -7,12 +7,12 @@ function Social() {
 
   return (
     <React.Fragment>
-      <div className='social_wrapper'>
-        <div className='social_title'>
+      <div className='social_wrapper_2'>
+        <div className='social_title_2'>
           Hit me up on those platforms
         </div>
 
-        <div className="connect_with_me_socials">
+        <div className="connect_with_me_socials_2">
           <div>
 
             <a href="https://www.facebook.com/sgenlecroyant/">

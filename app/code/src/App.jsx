@@ -27,7 +27,7 @@ function App(props) {
   }, [])
 
   const scrollRef = useRef(null);
-    useScrollSnap({ ref: scrollRef, duration: 10, delay: 0 });
+    useScrollSnap({ ref: scrollRef, duration: 100, delay: 0 });
 
 
   const MyDrawer = styled(Drawer)(({ theme }) => {
