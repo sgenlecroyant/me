@@ -128,7 +128,7 @@
 }
 
 .item_button {
-
+   
 }
 
 .item_text {
@@ -180,5 +180,10 @@
     }
     .item_icon {
         color: crimson;
+    }
+
+    .item_button {
+        /* background-color: green !important; */
+        margin: 13px !important;
     }
 }

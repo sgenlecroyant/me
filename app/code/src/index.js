@@ -17,19 +17,19 @@ import Focus from './components/focus/Focus';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <div>
-  <AppBar />
-    <BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <AppBar />
         <Routes>
           {/* <Route  path="/" element={<AppBar />} /> */}
           <Route index path='/' element={<App />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/focus' element={<Focus />} />
         </Routes>
-        <MyBottomNavigationAction />
-    </BrowserRouter>
-    
-  </div>
+
+      </BrowserRouter>
+
+    </div>
   </React.StrictMode>
 );
 

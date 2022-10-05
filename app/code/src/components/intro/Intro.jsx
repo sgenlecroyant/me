@@ -5,7 +5,7 @@ import { KeyboardArrowDown, FavoriteRounded } from '@mui/icons-material'
 import { init } from 'ityped'
 import me from '../../assets/images/selfie 2.jpg'
 import { Box } from '@mui/system'
-
+import { Link, useNavigate } from 'react-router-dom'
 
 function Intro(props) {
 

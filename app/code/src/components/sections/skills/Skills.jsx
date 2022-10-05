@@ -143,7 +143,7 @@ function Skills(props) {
 
     return (
         <React.Fragment>
-            <SkillsContainer className='skills_container'>
+            <SkillsContainer id='skills_section' className='skills_container'>
                 <div className="skills_skills_section">
                     <div className="title_and_icon">
                         <div>

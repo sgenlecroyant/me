@@ -56,7 +56,7 @@ function App(props) {
         <ContactChatIcon />
       </Sections>
       <MoveToTop/>
-      
+      <MyBottomNavigationAction />
     </div>
     
     </div>
