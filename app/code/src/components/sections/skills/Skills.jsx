@@ -436,6 +436,10 @@ function Skills(props) {
                             I am passionate about computer programming,
                             I learn very quickly and I love talking about tech.
                             In fact, I love sharing what I know with others and ask if there is anything that I don't know.
+                            <br/>
+                            ~ I love talking about Design Patterns, 
+                            <br/>
+                            ~ I love logging, yeah application logs
                         </div>
 
 

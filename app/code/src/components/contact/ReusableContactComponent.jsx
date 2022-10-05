@@ -1,6 +1,7 @@
 import { ArrowBack, Send } from '@mui/icons-material'
 import { Button, IconButton, Link, TextField } from '@mui/material'
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router'
 import AppBar from '../app-bar/AppBar'
 
 function ReusableContactComponent() {
@@ -9,9 +10,10 @@ function ReusableContactComponent() {
     const [email, setEmail] = useState("")
     const [message, setMessage] = useState("")
 
+    const navigate = useNavigate()
 
     const handleClick = (e) => {
-        window.location.replace('/')
+       navigate("/")
     }
 
     const submitMessage = (e) => {

@@ -11,20 +11,12 @@ function MyBottomNavigationAction(props) {
     const [activeBottomNavigation, setActiveBottomNavigation] = useState(0)
 
     var navigator = useNavigate()
-    var location = useLocation()
-
 
     useEffect(() => {
-
-        console.log("Bottom Navigation mounted")
-        console.log("useNavigate: ", navigator)
-        console.log("props: ", props)
-        // console.log("useLocation: ", location)
-
     }, [])
 
+    const navigate = useNavigate()
     
-
     const handleNavigation = (e, path) => {
         var topElement = document.getElementById('top');
         // console.log(history)
@@ -35,7 +27,7 @@ function MyBottomNavigationAction(props) {
         }
         else {
             console.log(path)
-            window.location.replace(path)
+            navigate(path)
         }
     }
     return (

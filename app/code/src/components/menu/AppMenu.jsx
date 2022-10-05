@@ -79,14 +79,14 @@ function AppMenu(props) {
                         </IconButton>
                         <ListItemText disableTypography primary="contact" className='item_text'></ListItemText>
                     </ListItem>
-                    <ListItem title="connect" className='list_item_connect' >
+                    {/* <ListItem title="connect" className='list_item_connect' >
                         <IconButton className="item_button">
                             <ListItemButton>
                                 <Handshake fontSize='small' className='item_icon'/>
                             </ListItemButton>
                         </IconButton>
                         <ListItemText disableTypography primary="connect" className='item_text'></ListItemText>
-                    </ListItem>
+                    </ListItem> */}
                 </List>
             </div>}
         </React.Fragment>

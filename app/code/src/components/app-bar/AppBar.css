@@ -100,5 +100,6 @@
     .menu {
         color: white;
         padding: 0px 08px;
+        cursor: pointer;
     }
 }
