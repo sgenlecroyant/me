@@ -4,7 +4,19 @@
     margin-top: 6rem;
 }
 
+.marquee_inner {
+    display: flex;
+    /* color: crimson; */
+    justify-content: center;
+    align-items: center;  
+    color: #3a3e59;
+    /* opacity: 1;   */
+}
 
+.marquee_inner > div {
+    padding: 0px 3px;
+    /* margin-bottom: 5px; */
+}
 
 .intro_right_side {
     flex: 7;
@@ -47,10 +59,12 @@
     padding-top: 6rem;
     line-height: 26px;
     padding-right: 10rem;
+    color: #3a3e59;
+    color: navy;
     color: crimson;
     /* background-image: url('../../assets/images/clippy.png');
     clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%); */
-    
+    /* opacity: 0.8; */
 }
 
 #first_name{
@@ -78,6 +92,9 @@
 
 .intro_text_bottom {
     font-family: 'Raleway', sans-serif;
+    text-align: center;
+    margin-top: 10px;
+    /* color: crimson */
 }
 .greetings_title{
     font-size: 20px;
@@ -88,7 +105,7 @@
 
 .greetings_tool {
     font-size: 30px;
-    padding-top: 15px;
+    padding-top: 10px;
     font-family: 'Raleway', "sa ns-serif";
     text-align: center;
 }
@@ -110,13 +127,24 @@
 .tool {
     
     padding-top: 10px;
-    color: crimson;
+    /* color: crimson; */
     text-align: center;
     letter-spacing: 1.5px;
 
     font-family: 'Raleway', "sa ns-serif" !important;
 
     
+}
+
+marquee {
+    padding: 10px;
+}
+
+@media screen and (min-width: 481px) {
+    
+}
+@media screen and (min-width: 481px) {
+
 }
 
 
@@ -185,6 +213,10 @@
         color: green;
     }
 
+    .paradigms {
+        display: none;
+    }
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 915px) {
@@ -205,6 +237,7 @@
         line-height: 1.5rem;
         padding-top: 10rem;
     }
+    
 }
 
 @media screen and (min-width: 1300px) {

@@ -2,14 +2,16 @@
     position: fixed;
     top: 40px;
     
-    background-color: wheat !important;
+    background-color: crimson !important;
+    color: white !important;
     width: 80%;
     height: 15rem;
     text-align: center;
     margin: 20px;
     margin-right: 20px;
     margin-left: 40px;
-    opacity: 1;
+    opacity: 0.8;
+    font-weight: 900;
 }
 
 .about_me_info_title {
@@ -25,10 +27,11 @@
     padding: 0px 1rem;
     font-size: 15px;
     letter-spacing: 1px;
-    color: #3a3e59;
-    opacity: 0.8;
+    /* color: #3a3e59; */
     padding: 0px 10px;
-    color: black;
+    font-size: 15px;
+    /* font-weight: 900; */
+
 }
 
 @media screen and (min-width: 481px) {

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { styled, Typography } from '@mui/material'
 import './intro.css'
-import { KeyboardArrowDown, FavoriteRounded } from '@mui/icons-material'
+import { KeyboardArrowDown, FavoriteRounded, HearingOutlined, LogoDev, HeartBrokenSharp, Favorite } from '@mui/icons-material'
 import { init } from 'ityped'
 import me from '../../assets/images/selfie 2.jpg'
 import { Box } from '@mui/system'
@@ -33,8 +33,10 @@ function Intro(props) {
 
     useEffect(() => {
         const languageAnimate = document.querySelector('#languageAnimate')
-        init(languageAnimate, { showCursor: false, strings: ['Java', 'JavaScript', 'TypeScript'],backDelay: 1500,
-        backSpeed:150,typeSpeed:  150 })
+        init(languageAnimate, {
+            showCursor: false, strings: ['Java', 'JavaScript', 'TypeScript'], backDelay: 1500,
+            backSpeed: 150, typeSpeed: 150
+        })
 
         // const paradigm_animate = document.querySelector('#paradigm_animate')
         // init(paradigm_animate, { showCursor: false, strings: ['Object-Oriented programming', 'Functional programming', 'Multithreaded-programming'] })
@@ -53,14 +55,30 @@ function Intro(props) {
                     <div className="intro_text_top">
                         <div className="greetings">Thanks for tuning in.
                         </div>
-                        <div id='first_name'> Franck Nsabimana, </div> 
+                        <div id='first_name'> Franck Nsabimana, </div>
                         <div className='greetings_title'>I am a passionate Software Developer </div>
-                            <div className='greetings_tool'>I use <span className='language' id="languageAnimate"></span> </div> 
+                        <div className='greetings_tool'>I use <span className='language' id="languageAnimate"></span> </div>
+
+                        <br/>
+                        <div>
+                            <div style={{textAlign: "center"}}>I do:</div>
+                            <marquee behavior="" direction="">
+                            OOP programming, Functional programming, Multithreaded programming
+                            </marquee>
+                        </div>
                     </div>
                     <div className="intro_text_bottom">
-                        {/* <div className='tool'>
+                        <div className="paradigms">
                             My favorite programming paradigms are: <br />
-                            Object-Oriented programming, Functional programming and Multithreaded programming.
+                            <div>Object-Oriented programming, Functional programming and Multithreaded programming</div>
+                        </div>
+                        {/* <div className='marquee'>
+                            <br />
+                            <div className="marquee_inner">
+                                <div>My</div> <div>{<Favorite fontSize='small' />}</div> <div>programming paradigms:</div></div>
+                            <marquee behavior="scroll" scrolldelay="120" direction="left">
+                                Object-Oriented programming, Functional programming, Multithreaded programming
+                            </marquee>
                         </div> */}
                     </div>
                 </div>
@@ -79,6 +97,6 @@ const mapDispatchToProps = (dispatch) => {
     return {
         toggle: (toggleValue) => dispatch(toggleMenu(toggleValue))
     }
-} 
+}
 
-export default connect(mapStateToProps, mapDispatchToProps) (Intro)
+export default connect(mapStateToProps, mapDispatchToProps)(Intro)
