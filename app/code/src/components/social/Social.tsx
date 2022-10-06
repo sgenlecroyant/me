@@ -9,7 +9,7 @@ function Social() {
     <React.Fragment>
       <div className='social_wrapper_2'>
         <div className='social_title_2'>
-          Hit me up on those platforms
+          Hit me up on these platforms
         </div>
 
         <div className="connect_with_me_socials_2">

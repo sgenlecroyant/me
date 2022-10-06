@@ -1,7 +1,12 @@
 import { Paper } from "@mui/material";
+import { useEffect } from "react";
 import './AboutMeInfo.css'
 
 function AboutMeInfo(props: any) {
+
+    useEffect(() => {
+        console.log("is loading ...")
+    }, [])
 
     return (
         <Paper elevation={3} className="about_me_info">

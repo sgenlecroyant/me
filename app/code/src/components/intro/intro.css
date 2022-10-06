@@ -141,6 +141,9 @@ marquee {
 }
 
 @media screen and (min-width: 481px) {
+    .my_paradigms {
+        display: none;
+    }
     
 }
 @media screen and (min-width: 481px) {

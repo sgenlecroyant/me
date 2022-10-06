@@ -60,7 +60,7 @@ function Intro(props) {
                         <div className='greetings_tool'>I use <span className='language' id="languageAnimate"></span> </div>
 
                         <br/>
-                        <div>
+                        <div className='my_paradigms'>
                             <div style={{textAlign: "center"}}>I do:</div>
                             <marquee behavior="" direction="">
                             OOP programming, Functional programming, Multithreaded programming
