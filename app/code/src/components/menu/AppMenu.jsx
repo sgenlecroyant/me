@@ -5,6 +5,8 @@ import { List, Typography, ListItemIcon, ListItem, ListItemText, ListItemButton,
 import { Link, useNavigate } from 'react-router-dom'
 import { Email, Handshake, AirlineSeatReclineNormal, School, ContactEmergency, } from '@mui/icons-material'
 import './AppMenu.css'
+import {connect} from 'react-redux'
+import { toggleMenu } from '../../redux/action'
 
 
 //{ handleMenuOptionClick: Function; showMenu: boolean }
@@ -93,4 +95,16 @@ function AppMenu(props) {
     )
 }
 
-export default AppMenu
+const mapStateToProps = (state) => {
+    return {
+        isMenuToggled: state.isMenuToggled
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        toggle: (toggleValue) => dispatch(toggleMenu(toggleValue))
+    }
+} 
+
+export default connect(mapStateToProps, mapDispatchToProps) (AppMenu)

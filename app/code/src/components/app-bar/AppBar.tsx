@@ -1,11 +1,13 @@
 import React, { SyntheticEvent, useEffect, useState } from 'react'
 import { Box, styled } from '@mui/material'
-import { Menu, Close, Clear } from '@mui/icons-material'
+import { Menu, Close, Clear, PropaneSharp } from '@mui/icons-material'
 import './AppBar.css'
 import AppMenu from '../menu/AppMenu'
 import AboutMe from '../contact/AboutMe'
 import { useNavigate } from 'react-router'
-function AppBar() {
+import { connect } from 'react-redux'
+import { toggleMenu } from '../../redux/action'
+function AppBar(props) {
 
     const [showMenu, setShowMenu] = useState(false)
 
@@ -34,7 +36,7 @@ function AppBar() {
     })
 
     const handleClick = (e: any) => {
-        setShowMenu(!showMenu)
+        props.toggle(!props.isMenuToggled)
     }
 
     const navStyleOnShowMenu = {
@@ -66,14 +68,26 @@ function AppBar() {
                     </ul>
                 </div>
                 <div className='menu' id='menu_icon' onClick={handleClick}>
-                    {showMenu ? <Close /> : <Menu />}
+                    {props.isMenuToggled ? <Close /> : <Menu />}
                 </div>
             </NavBar>
-            <AppMenu showMenu={showMenu} handleMenuOptionClick={handleClick} />
+            <AppMenu showMenu={props.isMenuToggled} handleMenuOptionClick={handleClick} />
             {/* <AboutMe/> */}
             </div>
         </React.Fragment>
     )
 }
 
-export default AppBar
+const mapStateToProps = (state: any) => {
+    return {
+        isMenuToggled: state.isMenuToggled
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        toggle: (toggleValue) => dispatch(toggleMenu(toggleValue))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps) (AppBar)
