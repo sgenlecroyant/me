@@ -1,0 +1,41 @@
+.about_me_info {
+    position: fixed;
+    top: 40px;
+    
+    background-color: crimson !important;
+    color: white !important;
+    width: 80%;
+    height: 15rem;
+    text-align: center;
+    margin: 20px;
+    margin-right: 20px;
+    margin-left: 40px;
+    opacity: 0.8;
+    font-weight: 900;
+}
+
+.about_me_info_title {
+    padding-top: 0px;
+    margin-bottom: 1rem;
+    font-family: 'Freehand', sans-serif;
+    border-bottom: 3px solid black;
+    display: inline-block;
+}
+
+.about_me_details {
+    text-align: center;
+    padding: 0px 1rem;
+    font-size: 15px;
+    letter-spacing: 1px;
+    /* color: #3a3e59; */
+    padding: 0px 10px;
+    font-size: 15px;
+    /* font-weight: 900; */
+
+}
+
+@media screen and (min-width: 481px) {
+    .about_me_info {
+        display: none;
+    }
+}

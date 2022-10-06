@@ -1,40 +1,28 @@
-.net-icon {
-    margin-left: 20px;
-    margin-top: 30px;
-}
-.net-icon:hover {
-    cursor: pointer;
+.social_wrapper {
+    width: 100%;
+    height: 100vh;
 }
 
-.animated-social {
-    animation-name: spcial-page-scroll-animated;
-    animation-timing-function: ease-in-out;
-    animation-duration: 3s;
-    animation-iteration-count: 1;
+.social_title_2 {
+
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 30px;
+    font-family: 'Freehand', cursive;
+    color: crimson;
 }
 
-@keyframes spcial-page-scroll-animated {
-    0% {
-        transform: translateY(800px);
-        opacity: 0;
-     }
-     25% {
-         opacity: 0.2;
-         transform: translateY(700px);
-     }
+.connect_with_me_socials_2 {
+    display: flex;
+    justify-content: space-around;
+   padding-bottom: 30px;
+}
 
-     50% {
-         opacity: 0.4;
-         transform: translateY(600px);
-     }
 
-     75% {
-         opacity: 0.6;
-         transform: translateY(500px);
-     }
 
-     100% {
-         opacity: 0.8;
-         transform: translateY(150px);
-     }   
+
+.social_icon {
+    color: crimson;
+    margin-bottom: 50px;
 }

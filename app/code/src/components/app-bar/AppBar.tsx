@@ -1,113 +1,93 @@
 import React, { SyntheticEvent, useEffect, useState } from 'react'
-import { AppBar as MuiAppBar, Box, IconButton, styled, Toolbar, Typography } from '@mui/material'
-import { Cancel, CancelOutlined, CancelPresentation, KeyboardArrowDown, Mail, Menu, Person } from '@mui/icons-material'
+import { Box, styled } from '@mui/material'
+import { Menu, Close, Clear, PropaneSharp } from '@mui/icons-material'
 import './AppBar.css'
 import AppMenu from '../menu/AppMenu'
-function AppBar() {
+import AboutMe from '../contact/AboutMe'
+import { useNavigate } from 'react-router'
+import { connect } from 'react-redux'
+import { toggleMenu } from '../../redux/action'
+function AppBar(props) {
 
-    const [showMenu, setShowMenu] = useState<boolean>(false)
-    const [isDesktop, setIsDesktop] = useState(false)
+    const [showMenu, setShowMenu] = useState(false)
 
-   
-    
-    const appBarHeight = "90px"
-    const MyApplicationAppBar = styled(MuiAppBar)(({ theme }) => {
-        
+    const navigate = useNavigate();
+
+    useEffect(() => {
+    }, [])
+
+
+    const NavBar = styled(Box)(({ theme }) => {
         return {
-            height: appBarHeight
-        }
-    })
-
-    const StyledToolbar = styled(Toolbar)(({ theme }) => {
-        return {
-            backgroundColor: "rgb(13, 13, 46)",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            height: appBarHeight
+            alignContent: "center",
+            padding: "0px 20px",
+            width: "100vw",
+            margin: "10px",
+            color: "white",
+            backgroundColor: "crimson",
+            [theme.breakpoints.down('sm')]: {
+                // backgroundColor: "green",
+                padding: "0px 5px"
+            }
         }
     })
 
-    const HeaderRightSide = styled(Box)(({ theme }) => {
-        return {
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center"
-        }
-    })
-
-    const HeaderLeftSide = styled(Box)(({ theme }) => {
-        return {
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center"
-        }
-    })
-
-    const RightSideIcons = styled(Box)(({ theme }) => {
-        return {
-            display: "flex",
-            justifyContent: "space-between",
-            marginLeft: "0px",
-            alignItems: "center",
-            marginTop: "10px"
-        }
-    })
-
-    const MyKeyboardArrowDown = styled(KeyboardArrowDown)(({ theme }) => {
-        return {
-            fontSize: "80px",
-            color: "inherit",
-            animation: "arrowBlink 1s infinite",
-        }
-    })
-
-    const handleEmail = (event: React.SyntheticEvent) => {
-        alert("emailing");
+    const handleClick = (e: any) => {
+        props.toggle(!props.isMenuToggled)
     }
 
-    const handleShowMenu = (event: React.SyntheticEvent) => {
-        setShowMenu(!showMenu)
+    const navStyleOnShowMenu = {
+        backgroundColor: "crimson",
+        color: "white"
+    }
 
+    const navStyleOnHideMenu = {
+        backgroundColor: "white",
+        color: "crimson"
+    }
+
+    const handleNavLinkClick = (e: React.SyntheticEvent, link: string) => {
+        navigate(link)
     }
 
 
-    const handleScrollOnClick = (event: any) => {
-        const destinationView = document.getElementById('skills')
-        destinationView?.scrollIntoView({behavior: "smooth"})
-    }
     return (
         <React.Fragment>
-            <MyApplicationAppBar elevation={0} position='sticky'>
-                <StyledToolbar>
-                    <HeaderLeftSide>
-                        <Typography fontStyle={'normal  '} fontSize={'30px'} fontWeight={700}>{`{CodeDebug:)}`}</Typography>
-                        <RightSideIcons>
-                            <div className='rightside-icon'>
-                                {/* <Person /> */}
-                            </div>
-                            <div className='rightside-icon'>
-                                {/* <Mail /> */}
-                            </div>
-                        </RightSideIcons>
-                    </HeaderLeftSide>
-                    <Box>
-                        <div className='arrow-icon-wrapper'>
-                            <a className='arrow-skills' style={{ color: "maroon" }} onClick={handleScrollOnClick}>
-                                <MyKeyboardArrowDown />
-                            </a>
-                        </div>
-                    </Box>
-                    <HeaderRightSide>
-                        <IconButton onClick={handleShowMenu}>
-                            {!showMenu ? <Menu color='success' /> : <CancelPresentation color='success' />}
-                        </IconButton>
-                    </HeaderRightSide>
-                </StyledToolbar>
-            </MyApplicationAppBar>
-            <AppMenu handleMenuOptionClick={handleShowMenu} showMenu={showMenu} />
+            <div id="top" className='relative_to_contact_chat'>
+            <NavBar className='navbar' id="mynav" >
+                <div className="logo">CodeDebug</div>
+
+                <div className="right_side">
+                    <ul className="links" id="links_list">
+                        <li><a href="#skills_section" id="skills">skills</a></li>
+                        <li><li onClick={(e) => handleNavLinkClick(e, "/contact")} id="connect">Connect</li></li>
+                        <li><li onClick={(e) => handleNavLinkClick(e, "/focus")} id="focus">focus</li></li>
+                    </ul>
+                </div>
+                <div className='menu' id='menu_icon' onClick={handleClick}>
+                    {props.isMenuToggled ? <Close /> : <Menu />}
+                </div>
+            </NavBar>
+            <AppMenu showMenu={props.isMenuToggled} handleMenuOptionClick={handleClick} />
+            {/* <AboutMe/> */}
+            </div>
         </React.Fragment>
     )
 }
 
-export default AppBar
+const mapStateToProps = (state: any) => {
+    return {
+        isMenuToggled: state.isMenuToggled
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        toggle: (toggleValue) => dispatch(toggleMenu(toggleValue))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps) (AppBar)
