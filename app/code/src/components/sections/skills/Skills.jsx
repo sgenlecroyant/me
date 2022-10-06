@@ -122,16 +122,16 @@ function Skills(props) {
             height: "100vh",
             backgroundColor: "",
             marginTop: "8rem",
-            [theme.breakpoints.down('sm')]: {
-                paddingTop: "0px",
-                backgroundColor: "green",
-                marginTop: "-1rem"
-            },
-            [theme.breakpoints.down('sm')]: {
-                paddingTop: "0rem",
-                // backgroundColor: "yellow",
-                marginTop: "0rem"
-            },
+            // [theme.breakpoints.down('sm')]: {
+            //     paddingTop: "0px",
+            //     backgroundColor: "green",
+            //     marginTop: "-1rem"
+            // },
+            // [theme.breakpoints.down('sm')]: {
+            //     paddingTop: "0rem",
+            //     // backgroundColor: "yellow",
+            //     marginTop: "-3rem"
+            // },
 
             // [theme.breakpoints.up('lg')]: {
             //     paddingTop: "0px",

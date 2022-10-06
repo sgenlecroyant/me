@@ -57,10 +57,6 @@ function Intro(props) {
                         <div className='greetings_title'>I am a passionate Software Developer </div>
                             <div className='greetings_tool'>I use <span className='language' id="languageAnimate"></span> </div> 
                     </div>
-                    <div>{`State is now: ${props.isMenuToggled}`} </div>
-                    <div>
-                        <button onClick={(e) => props.toggle(true)}>change state</button>
-                    </div>
                     <div className="intro_text_bottom">
                         {/* <div className='tool'>
                             My favorite programming paradigms are: <br />

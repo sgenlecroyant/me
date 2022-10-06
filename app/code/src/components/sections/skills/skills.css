@@ -1,3 +1,5 @@
+
+
 #skills_icon {
     width: 100px;
     height: 100px;
@@ -123,6 +125,10 @@
     padding: 20px 10px;
 }
 @media screen and (max-width: 480px) {
+
+    .skills_container {
+        margin-top: -70px !important;
+    }
 
     #skills_icon {
         width: 50px;
