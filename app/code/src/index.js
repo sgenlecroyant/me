@@ -13,19 +13,24 @@ import {
 import Contact from './components/contact/Contact';
 import AppBar from './components/app-bar/AppBar';
 import Focus from './components/focus/Focus';
+import { Provider } from 'react-redux';
+import { store } from './redux/stores';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <div>
       <BrowserRouter>
-        <AppBar />
+
+       <Provider store={store}>
+       <AppBar />
         <Routes>
           {/* <Route  path="/" element={<AppBar />} /> */}
           <Route index path='/' element={<App />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/focus' element={<Focus />} />
         </Routes>
+       </Provider>
 
       </BrowserRouter>
 

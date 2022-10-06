@@ -6,6 +6,8 @@ import { init } from 'ityped'
 import me from '../../assets/images/selfie 2.jpg'
 import { Box } from '@mui/system'
 import { Link, useNavigate } from 'react-router-dom'
+import { toggleMenu } from '../../redux/action'
+import { connect } from 'react-redux'
 
 function Intro(props) {
 
@@ -55,6 +57,10 @@ function Intro(props) {
                         <div className='greetings_title'>I am a passionate Software Developer </div>
                             <div className='greetings_tool'>I use <span className='language' id="languageAnimate"></span> </div> 
                     </div>
+                    <div>{`State is now: ${props.isMenuToggled}`} </div>
+                    <div>
+                        <button onClick={(e) => props.toggle(true)}>change state</button>
+                    </div>
                     <div className="intro_text_bottom">
                         {/* <div className='tool'>
                             My favorite programming paradigms are: <br />
@@ -67,4 +73,16 @@ function Intro(props) {
     )
 }
 
-export default Intro
+const mapStateToProps = (state) => {
+    return {
+        isMenuToggled: state.isMenuToggled
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        toggle: (toggleValue) => dispatch(toggleMenu(toggleValue))
+    }
+} 
+
+export default connect(mapStateToProps, mapDispatchToProps) (Intro)

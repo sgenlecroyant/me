@@ -54,7 +54,7 @@
     font-size: var(--defaultFontSize);
     color: white;
     padding: 0px 20px;
-    font-weight: 900;
+    font-weight: 400;
 }
 
 .right_side .links li a:hover{
