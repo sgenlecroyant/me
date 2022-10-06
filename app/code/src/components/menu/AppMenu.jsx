@@ -44,10 +44,12 @@ function AppMenu(props) {
             destinationElement?.scrollIntoView({ behavior: 'smooth' });
         }else if(clicked === 'focus'){
             // window.location.replace('http://localhost:3000/focus')
+            props.toggle(false)
             navigate('/' +clicked)
 
         }else if(clicked === 'contact'){
             // window.location.replace('http://localhost:3000/contact')
+            props.toggle(false)
             navigate('/' +clicked)
         }
     }
